@@ -1,0 +1,53 @@
+{
+    "language": "zh-hans",
+    "title": "技术文档",
+    "author": "空ping子",
+    "plugins": [
+        "back-to-top-button",
+        "-sharing",
+        "sharing-plus",
+        "todo",
+        "mermaid-full@>=0.5.1",
+        "mathjax-full@>=0.6.2",
+        "donate",
+        "flexible-alerts"
+    ],
+    "pluginsConfig": {
+        "sharing": {
+            "douban": true,
+            "qq": true,
+            "qzone": true,
+            "weibo": true,
+            "google": false,
+            "facebook": false,
+            "whatsapp": false,
+            "all": [
+                "weibo",
+                "qzone",
+                "qq",
+                "douban",
+                "google",
+                "linkedin",
+                "twitter",
+                "facebook",
+                "whatsapp"
+            ]
+        },
+        "donate": {
+            "alipay": "/images/qr_alipay.png",
+            "wechat": "/images/qr_wechat.png",
+            "title": "",
+            "button": "支持作者",
+            "alipayText": "支付宝捐赠",
+            "wechatText": "微信捐赠"
+        },
+        "flexible-alerts": {
+            "style": "callout",
+            "comment": {
+                "label": "Comment",
+                "icon": "fa fa-comments",
+                "className": "info"
+            }
+        }
+    }
+}
