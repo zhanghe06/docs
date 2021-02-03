@@ -55,7 +55,7 @@ git subtree push --prefix=_book origin gh-pages  # 注意，分支名必须为gh
 
 https://<你的用户名称>.github.io/<你的项目名称>/
 
-[https://zhanghe06.github.io/dev-doc/](https://zhanghe06.github.io/dev-doc/)
+[https://zhanghe06.github.io/docs/](https://zhanghe06.github.io/docs/)
 
 ### 完整方式
 
