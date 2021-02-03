@@ -1,0 +1,652 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>通知系统 (Notification System) · 技术文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="空ping子">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-full/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ParallelConcurrence.html" />
+    
+    
+    <link rel="prev" href="MultiTask.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Cloud/">
+            
+                <a href="../Cloud/">
+            
+                    
+                    云服务 (Cloud Server)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Cloud/Aliyun.html">
+            
+                <a href="../Cloud/Aliyun.html">
+            
+                    
+                    Aliyun
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Cloud/Tencent.html">
+            
+                <a href="../Cloud/Tencent.html">
+            
+                    
+                    Tencent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Cloud/Vultr.html">
+            
+                <a href="../Cloud/Vultr.html">
+            
+                    
+                    Vultr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Algorithm/">
+            
+                <a href="../Algorithm/">
+            
+                    
+                    算法 (Algorithm)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Algorithm/QuickSort.html">
+            
+                <a href="../Algorithm/QuickSort.html">
+            
+                    
+                    快速排序 (QuickSort)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Algorithm/MergeSort.html">
+            
+                <a href="../Algorithm/MergeSort.html">
+            
+                    
+                    归并排序 (MergeSort)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Algorithm/Apriori.html">
+            
+                <a href="../Algorithm/Apriori.html">
+            
+                    
+                    先验算法 (Apriori)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Algorithm/RecsysCF.html">
+            
+                <a href="../Algorithm/RecsysCF.html">
+            
+                    
+                    协同过滤 (RecsysCF)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Algorithm/Prime.html">
+            
+                <a href="../Algorithm/Prime.html">
+            
+                    
+                    素数应用 (Prime)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    架构 (Architecture)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Cache.html">
+            
+                <a href="Cache.html">
+            
+                    
+                    缓存系统 (Cache System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Cluster.html">
+            
+                <a href="Cluster.html">
+            
+                    
+                    集群系统 (Cluster System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="DataModel.html">
+            
+                <a href="DataModel.html">
+            
+                    
+                    数据模型 (Data Model)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="Idempotent.html">
+            
+                <a href="Idempotent.html">
+            
+                    
+                    幂等设计 (Idempotent)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="MessageQueue.html">
+            
+                <a href="MessageQueue.html">
+            
+                    
+                    消息队列 (Message Queue)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="MicroService.html">
+            
+                <a href="MicroService.html">
+            
+                    
+                    微服务 (Micro Service)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="Migration.html">
+            
+                <a href="Migration.html">
+            
+                    
+                    迁移系统 (Migration System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="Monitoring.html">
+            
+                <a href="Monitoring.html">
+            
+                    
+                    监控系统 (Monitoring System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="MultiTask.html">
+            
+                <a href="MultiTask.html">
+            
+                    
+                    多任务系统 (Multi Task)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.10" data-path="Notification.html">
+            
+                <a href="Notification.html">
+            
+                    
+                    通知系统 (Notification System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="ParallelConcurrence.html">
+            
+                <a href="ParallelConcurrence.html">
+            
+                    
+                    并行并发 (Parallel Concurrence)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="ProcessModel.html">
+            
+                <a href="ProcessModel.html">
+            
+                    
+                    处理模型 (Process Model)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.13" data-path="ProducerConsumer.html">
+            
+                <a href="ProducerConsumer.html">
+            
+                    
+                    生产消费 (Producer Consumer)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="Quota.html">
+            
+                <a href="Quota.html">
+            
+                    
+                    配额系统 (Quota System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="Status.html">
+            
+                <a href="Status.html">
+            
+                    
+                    状态系统 (Status System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="Task.html">
+            
+                <a href="Task.html">
+            
+                    
+                    任务系统 (Task System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >通知系统 (Notification System)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x901A;&#x77E5;&#x7CFB;&#x7EDF;-notification-system">&#x901A;&#x77E5;&#x7CFB;&#x7EDF; (Notification System)</h1>
+<p>&#x901A;&#x77E5;&#x5206;&#x4E3A;&#xFF1A;&#x8FC7;&#x7A0B;&#x901A;&#x77E5;&#x3001;&#x7ED3;&#x679C;&#x901A;&#x77E5;</p>
+<ul>
+<li>request</li>
+<li>notice</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="MultiTask.html" class="navigation navigation-prev " aria-label="Previous page: 多任务系统 (Multi Task)">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ParallelConcurrence.html" class="navigation navigation-next " aria-label="Next page: 并行并发 (Parallel Concurrence)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"通知系统 (Notification System)","level":"1.4.10","depth":2,"next":{"title":"并行并发 (Parallel Concurrence)","level":"1.4.11","depth":2,"path":"Architecture/ParallelConcurrence.md","ref":"Architecture/ParallelConcurrence.md","articles":[]},"previous":{"title":"多任务系统 (Multi Task)","level":"1.4.9","depth":2,"path":"Architecture/MultiTask.md","ref":"Architecture/MultiTask.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","-sharing","sharing-plus","todo","mermaid-full@>=0.5.1","mathjax-full@>=0.6.2","donate","flexible-alerts","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mathjax-full":{},"livereload":{},"todo":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"/docs/images/qr_alipay.png","alipayText":"支付宝捐赠","button":"支持作者","title":"","wechat":"/docs/images/qr_wechat.png","wechatText":"微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-full":{},"highlight":{},"back-to-top-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"sharing":{"douban":true,"qq":true,"qzone":true,"weibo":true,"google":false,"facebook":false,"whatsapp":false,"all":["weibo","qzone","qq","douban","google","linkedin","twitter","facebook","whatsapp"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"空ping子","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"技术文档","language":"zh-hans","gitbook":"*"},"file":{"path":"Architecture/Notification.md","mtime":"2021-02-03T16:17:49.828Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-03T16:31:22.991Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-full/mermaidAPI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-full/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax-full/config.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax-full/mathjax.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
