@@ -90,7 +90,7 @@ git push origin master
 
 # 二、更新页面分支
 git checkout github
-git rebase master
+git merge master
 gitbook build
 git add . && git commit -m '页面更新'
 git subtree push --prefix=_book origin gh-pages
