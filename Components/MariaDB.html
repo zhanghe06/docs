@@ -1,0 +1,1340 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>MariaDB · 技术文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="空ping子">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-full/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="MongoDB.html" />
+    
+    
+    <link rel="prev" href="Keepalived.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Cloud/">
+            
+                <a href="../Cloud/">
+            
+                    
+                    云服务 (Cloud Server)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Cloud/Aliyun.html">
+            
+                <a href="../Cloud/Aliyun.html">
+            
+                    
+                    Aliyun
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Cloud/Tencent.html">
+            
+                <a href="../Cloud/Tencent.html">
+            
+                    
+                    Tencent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Cloud/Vultr.html">
+            
+                <a href="../Cloud/Vultr.html">
+            
+                    
+                    Vultr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    组件 (Components)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Keepalived.html">
+            
+                <a href="Keepalived.html">
+            
+                    
+                    Keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="MariaDB.html">
+            
+                <a href="MariaDB.html">
+            
+                    
+                    MariaDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="MongoDB.html">
+            
+                <a href="MongoDB.html">
+            
+                    
+                    MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="MSSqlServer.html">
+            
+                <a href="MSSqlServer.html">
+            
+                    
+                    MSSqlServer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="MySQL.html">
+            
+                <a href="MySQL.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="PostgreSQL.html">
+            
+                <a href="PostgreSQL.html">
+            
+                    
+                    PostgreSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="RabbitMQ.html">
+            
+                <a href="RabbitMQ.html">
+            
+                    
+                    RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="Redis.html">
+            
+                <a href="Redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="Sqlite.html">
+            
+                <a href="Sqlite.html">
+            
+                    
+                    Sqlite
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Algorithm/">
+            
+                <a href="../Algorithm/">
+            
+                    
+                    算法 (Algorithm)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Algorithm/QuickSort.html">
+            
+                <a href="../Algorithm/QuickSort.html">
+            
+                    
+                    快速排序 (QuickSort)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Algorithm/MergeSort.html">
+            
+                <a href="../Algorithm/MergeSort.html">
+            
+                    
+                    归并排序 (MergeSort)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Algorithm/Apriori.html">
+            
+                <a href="../Algorithm/Apriori.html">
+            
+                    
+                    先验算法 (Apriori)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Algorithm/RecsysCF.html">
+            
+                <a href="../Algorithm/RecsysCF.html">
+            
+                    
+                    协同过滤 (RecsysCF)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Algorithm/Prime.html">
+            
+                <a href="../Algorithm/Prime.html">
+            
+                    
+                    素数应用 (Prime)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Architecture/">
+            
+                <a href="../Architecture/">
+            
+                    
+                    架构 (Architecture)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Architecture/Cache.html">
+            
+                <a href="../Architecture/Cache.html">
+            
+                    
+                    缓存系统 (Cache System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Architecture/Cluster.html">
+            
+                <a href="../Architecture/Cluster.html">
+            
+                    
+                    集群系统 (Cluster System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Architecture/DataModel.html">
+            
+                <a href="../Architecture/DataModel.html">
+            
+                    
+                    数据模型 (Data Model)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Architecture/Idempotent.html">
+            
+                <a href="../Architecture/Idempotent.html">
+            
+                    
+                    幂等设计 (Idempotent)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Architecture/MessageQueue.html">
+            
+                <a href="../Architecture/MessageQueue.html">
+            
+                    
+                    消息队列 (Message Queue)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Architecture/MicroService.html">
+            
+                <a href="../Architecture/MicroService.html">
+            
+                    
+                    微服务 (Micro Service)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Architecture/Migration.html">
+            
+                <a href="../Architecture/Migration.html">
+            
+                    
+                    迁移系统 (Migration System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Architecture/Monitoring.html">
+            
+                <a href="../Architecture/Monitoring.html">
+            
+                    
+                    监控系统 (Monitoring System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../Architecture/MultiTask.html">
+            
+                <a href="../Architecture/MultiTask.html">
+            
+                    
+                    多任务系统 (Multi Task)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Architecture/Notification.html">
+            
+                <a href="../Architecture/Notification.html">
+            
+                    
+                    通知系统 (Notification System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../Architecture/ParallelConcurrence.html">
+            
+                <a href="../Architecture/ParallelConcurrence.html">
+            
+                    
+                    并行并发 (Parallel Concurrence)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../Architecture/ProcessModel.html">
+            
+                <a href="../Architecture/ProcessModel.html">
+            
+                    
+                    处理模型 (Process Model)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../Architecture/ProducerConsumer.html">
+            
+                <a href="../Architecture/ProducerConsumer.html">
+            
+                    
+                    生产消费 (Producer Consumer)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../Architecture/Quota.html">
+            
+                <a href="../Architecture/Quota.html">
+            
+                    
+                    配额系统 (Quota System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../Architecture/Status.html">
+            
+                <a href="../Architecture/Status.html">
+            
+                    
+                    状态系统 (Status System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../Architecture/Task.html">
+            
+                <a href="../Architecture/Task.html">
+            
+                    
+                    任务系统 (Task System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >MariaDB</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="mariadb">MariaDB</h1>
+<h2 id="&#x4E0E;-mysql-&#x7684;&#x517C;&#x5BB9;&#x6027;">&#x4E0E; MySQL &#x7684;&#x517C;&#x5BB9;&#x6027;</h2>
+<p><a href="https://mariadb.com/kb/en/mariadb-vs-mysql-compatibility" target="_blank">https://mariadb.com/kb/en/mariadb-vs-mysql-compatibility</a></p>
+<table>
+<thead>
+<tr>
+<th>MariaDB&#x7248;&#x672C;</th>
+<th>MySQL&#x7248;&#x672C;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MariaDB 10.2&#xFF0C;MariaDB 10.3&#x548C;MariaDB 10.4</td>
+<td>MySQL 5.7</td>
+<td>&#x6709;&#x9650;&#x66FF;&#x4EE3;</td>
+</tr>
+<tr>
+<td>MariaDB 10.0&#x548C;MariaDB 10.1</td>
+<td>MySQL 5.6</td>
+<td>&#x6709;&#x9650;&#x66FF;&#x4EE3;</td>
+</tr>
+<tr>
+<td>MariaDB 5.5</td>
+<td>MySQL 5.5</td>
+<td>&#x53EF;&#x4EE5;&#x66FF;&#x4EE3;</td>
+</tr>
+<tr>
+<td>MariaDB 5.1&#xFF0C;MariaDB 5.2&#x548C;MariaDB 5.3</td>
+<td>MySQL 5.1</td>
+<td>&#x76F4;&#x63A5;&#x66FF;&#x4EE3;</td>
+</tr>
+</tbody>
+</table>
+<p>MariaDB 10.2&#x3001;MySQL 5.7 &#x7248;&#x672C;&#x5F00;&#x59CB;&#xFF0C;&#x652F;&#x6301;JSON&#x5B57;&#x6BB5;&#x7C7B;&#x578B;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x4E0D;&#x540C;&#xFF1B;&#x5982;&#x679C;&#x5C06;MySQL&#x8FC1;&#x79FB;&#x5230;MariaDB&#xFF0C;JSON&#x5219;&#x88AB;&#x8F6C;&#x6362;&#x4E3A;TEXT</p>
+<h2 id="&#x4E8B;&#x52A1;">&#x4E8B;&#x52A1;</h2>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x4E8B;&#x52A1;&#x662F;&#x5FC5;&#x987B;&#x6EE1;&#x8DB3;4&#x4E2A;&#x6761;&#x4EF6;&#xFF08;ACID&#xFF09;&#xFF1A;</p>
+<ol>
+<li>&#x539F;&#x5B50;&#x6027;&#xFF08;Atomicity&#xFF0C;&#x6216;&#x79F0;&#x4E0D;&#x53EF;&#x5206;&#x5272;&#x6027;&#xFF09;</li>
+<li>&#x4E00;&#x81F4;&#x6027;&#xFF08;Consistency&#xFF09;</li>
+<li>&#x9694;&#x79BB;&#x6027;&#xFF08;Isolation&#xFF0C;&#x53C8;&#x79F0;&#x72EC;&#x7ACB;&#x6027;&#xFF09;</li>
+<li>&#x6301;&#x4E45;&#x6027;&#xFF08;Durability&#xFF09;</li>
+</ol>
+<ul>
+<li><p><strong>&#x539F;&#x5B50;&#x6027;</strong>&#xFF1A;&#x4E00;&#x4E2A;&#x4E8B;&#x52A1;&#xFF08;transaction&#xFF09;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#xFF0C;&#x8981;&#x4E48;&#x5168;&#x90E8;&#x5B8C;&#x6210;&#xFF0C;&#x8981;&#x4E48;&#x5168;&#x90E8;&#x4E0D;&#x5B8C;&#x6210;&#xFF0C;&#x4E0D;&#x4F1A;&#x7ED3;&#x675F;&#x5728;&#x4E2D;&#x95F4;&#x67D0;&#x4E2A;&#x73AF;&#x8282;&#x3002;&#x4E8B;&#x52A1;&#x5728;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#xFF0C;&#x4F1A;&#x88AB;&#x56DE;&#x6EDA;&#xFF08;Rollback&#xFF09;&#x5230;&#x4E8B;&#x52A1;&#x5F00;&#x59CB;&#x524D;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5C31;&#x50CF;&#x8FD9;&#x4E2A;&#x4E8B;&#x52A1;&#x4ECE;&#x6765;&#x6CA1;&#x6709;&#x6267;&#x884C;&#x8FC7;&#x4E00;&#x6837;&#x3002;</p>
+</li>
+<li><p><strong>&#x4E00;&#x81F4;&#x6027;</strong>&#xFF1A;&#x5728;&#x4E8B;&#x52A1;&#x5F00;&#x59CB;&#x4E4B;&#x524D;&#x548C;&#x4E8B;&#x52A1;&#x7ED3;&#x675F;&#x4EE5;&#x540E;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x7684;&#x5B8C;&#x6574;&#x6027;&#x6CA1;&#x6709;&#x88AB;&#x7834;&#x574F;&#x3002;&#x8FD9;&#x8868;&#x793A;&#x5199;&#x5165;&#x7684;&#x8D44;&#x6599;&#x5FC5;&#x987B;&#x5B8C;&#x5168;&#x7B26;&#x5408;&#x6240;&#x6709;&#x7684;&#x9884;&#x8BBE;&#x89C4;&#x5219;&#xFF0C;&#x8FD9;&#x5305;&#x542B;&#x8D44;&#x6599;&#x7684;&#x7CBE;&#x786E;&#x5EA6;&#x3001;&#x4E32;&#x8054;&#x6027;&#x4EE5;&#x53CA;&#x540E;&#x7EED;&#x6570;&#x636E;&#x5E93;&#x53EF;&#x4EE5;&#x81EA;&#x53D1;&#x6027;&#x5730;&#x5B8C;&#x6210;&#x9884;&#x5B9A;&#x7684;&#x5DE5;&#x4F5C;&#x3002;</p>
+</li>
+<li><p><strong>&#x9694;&#x79BB;&#x6027;</strong>&#xFF1A;&#x6570;&#x636E;&#x5E93;&#x5141;&#x8BB8;&#x591A;&#x4E2A;&#x5E76;&#x53D1;&#x4E8B;&#x52A1;&#x540C;&#x65F6;&#x5BF9;&#x5176;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x8BFB;&#x5199;&#x548C;&#x4FEE;&#x6539;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x9694;&#x79BB;&#x6027;&#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x591A;&#x4E2A;&#x4E8B;&#x52A1;&#x5E76;&#x53D1;&#x6267;&#x884C;&#x65F6;&#x7531;&#x4E8E;&#x4EA4;&#x53C9;&#x6267;&#x884C;&#x800C;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x7684;&#x4E0D;&#x4E00;&#x81F4;&#x3002;&#x4E8B;&#x52A1;&#x9694;&#x79BB;&#x5206;&#x4E3A;&#x4E0D;&#x540C;&#x7EA7;&#x522B;&#xFF0C;&#x5305;&#x62EC;&#x8BFB;&#x672A;&#x63D0;&#x4EA4;&#xFF08;Read uncommitted&#xFF09;&#x3001;&#x8BFB;&#x63D0;&#x4EA4;&#xFF08;read committed&#xFF09;&#x3001;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#xFF08;repeatable read&#xFF09;&#x548C;&#x4E32;&#x884C;&#x5316;&#xFF08;Serializable&#xFF09;&#x3002;</p>
+</li>
+<li><p><strong>&#x6301;&#x4E45;&#x6027;</strong>&#xFF1A;&#x4E8B;&#x52A1;&#x5904;&#x7406;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x4FEE;&#x6539;&#x5C31;&#x662F;&#x6C38;&#x4E45;&#x7684;&#xFF0C;&#x5373;&#x4FBF;&#x7CFB;&#x7EDF;&#x6545;&#x969C;&#x4E5F;&#x4E0D;&#x4F1A;&#x4E22;&#x5931;&#x3002;</p>
+</li>
+</ul>
+<h2 id="&#x6D4B;&#x8BD5;-&#x5E7B;&#x8BFB;&#xFF08;phantom-read&#xFF09;">&#x6D4B;&#x8BD5; &#x201C;&#x5E7B;&#x8BFB;&#x201D;&#xFF08;phantom read&#xFF09;</h2>
+<p>&#x56E0;&#x9AD8;&#x5E76;&#x53D1;&#x573A;&#x666F;&#x4E0B;, &#x4F1A;&#x51FA;&#x73B0;&#x540C;&#x4E00;&#x65F6;&#x523B;&#x4EA4;&#x53C9;&#x591A;&#x4E2A;&#x4E8B;&#x52A1;&#x7684;&#x60C5;&#x51B5;, &#x63A5;&#x4E0B;&#x6765;&#x901A;&#x8FC7;2&#x4E2A;&#x4F8B;&#x5B50;&#x7684;&#x6A21;&#x62DF;, &#x89C2;&#x5BDF;&#x4E00;&#x4E0B;&#x5BF9;&#x6570;&#x636E;&#x5E93;&#x53CA;&#x4E1A;&#x52A1;&#x4EA7;&#x751F;&#x7684;&#x5F71;&#x54CD;</p>
+<p>&#x51C6;&#x5907;&#x6D4B;&#x8BD5;&#x6570;&#x636E;&#x8868;</p>
+<pre><code>MariaDB [flask_restful]&gt; DROP TABLE IF EXISTS `t_products`;
+CREATE TABLE `t_products` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(60) NOT NULL DEFAULT &apos;&apos; COMMENT &apos;product name&apos;,
+  `num` INT NOT NULL DEFAULT &apos;0&apos; COMMENT &apos;stock num&apos;,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT=&apos;stock table&apos;;
+MariaDB [flask_restful]&gt; select @@global.tx_isolation, @@tx_isolation;
++-----------------------+-----------------+
+| @@global.tx_isolation | @@tx_isolation  |
++-----------------------+-----------------+
+| REPEATABLE-READ       | REPEATABLE-READ |
++-----------------------+-----------------+
+</code></pre><p>InnoDB&#x4E8B;&#x52A1;&#x7684;&#x9694;&#x79BB;&#x7EA7;&#x522B;&#x6709;&#x56DB;&#x7EA7;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x201C;&#x53EF;&#x91CD;&#x590D;&#x8BFB;&#x201D;&#xFF08;REPEATABLE READ&#xFF09;</p>
+<ol>
+<li>&#x63D2;&#x5165;&#x5E93;&#x5B58;&#xFF08;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x63D2;&#x5165;&#xFF09;<pre><code>T Session A                                     Session B
+|
+| START TRANSACTION;                            START TRANSACTION;
+|
+| SELECT * FROM t_products WHERE name=&apos;a&apos;;
+| empty set
+|                                               INSERT INTO t_products (`name`, `num`) VALUES (&apos;a&apos;, 5);
+|
+| SELECT * FROM t_products;                     SELECT * FROM t_products WHERE name=&apos;a&apos;;
+| empty set                                     +----+------+-----+
+|                                               | id | name | num |
+|                                               +----+------+-----+
+|                                               |  1 | a    |   5 |
+|                                               +----+------+-----+
+|
+|                                               COMMIT;
+|
+| SELECT * FROM t_products WHERE name=&apos;a&apos;;
+| empty set
+|
+| INSERT INTO t_products (`name`, `num`) VALUES (&apos;a&apos;, 5);
+| ERROR 1062 (23000): Duplicate entry &apos;a&apos; for key &apos;uk_name&apos;
+-
+</code></pre>&#x867D;&#x7136;&#x56E0;&#x5E7B;&#x8BFB;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x5E93;&#x7EA7;&#x522B;&#x63D2;&#x5165;&#x5F02;&#x5E38;, &#x4F46;&#x662F;&#x5F02;&#x5E38;&#x56DE;&#x6EDA;&#x4E0D;&#x4F1A;&#x5F71;&#x54CD;&#x4E1A;&#x52A1;</li>
+</ol>
+<ol>
+<li>&#x62A2;&#x8D2D;&#x79D2;&#x6740;&#xFF08;&#x5E93;&#x5B58;&#x5B58;&#x5728;&#x5219;&#x6263;&#x9664;&#x5E93;&#x5B58;&#x6570;&#x91CF;&#xFF09;</li>
+</ol>
+<p>&#x5047;&#x5B9A;&#x5E93;&#x5B58;&#x4E3A;1</p>
+<pre><code>MariaDB [flask_restful]&gt; UPDATE t_products SET num=1;
+</code></pre><p>&#x6A21;&#x62DF;2&#x4E2A;&#x7528;&#x6237;&#x540C;&#x65F6;&#x62A2;&#x8D2D;</p>
+<pre><code>T Session A                                         Session B
+|
+| START TRANSACTION;                                START TRANSACTION;
+|
+| SELECT num FROM t_products WHERE id=1;            SELECT num FROM t_products WHERE id=1;
+| +-----+                                           +-----+
+| | num |                                           | num |
+| +-----+                                           +-----+
+| |   1 |                                           |   1 |
+| +-----+                                           +-----+
+|
+| UPDATE t_products SET num=num-1 WHERE id=1 and num&gt;0;
+|
+| SELECT num FROM t_products WHERE id=1;            SELECT num FROM t_products WHERE id=1;
+| +-----+                                           +-----+
+| | num |                                           | num |
+| +-----+                                           +-----+
+| |   0 |                                           |   1 |
+| +-----+                                           +-----+
+|
+| COMMIT;
+|
+|                                                   SELECT num FROM t_products WHERE id=1;
+|                                                   +-----+
+|                                                   | num |
+|                                                   +-----+
+|                                                   |   1 |
+|                                                   +-----+
+|
+|                                                   UPDATE t_products SET num=num-1 WHERE id=1 and num&gt;0;
+|
+|                                                   SELECT num FROM t_products WHERE id=1;
+|                                                   +-----+
+|                                                   | num |
+|                                                   +-----+
+|                                                   |  -1 |
+|                                                   +-----+
+|
+|                                                   COMMIT;
+|
+-
+</code></pre><p>&#x56E0;&#x5E7B;&#x8BFB;, &#x5E76;&#x6CA1;&#x6709;&#x5BFC;&#x81F4;&#x6570;&#x636E;&#x5E93;&#x66F4;&#x65B0;&#x5F02;&#x5E38;, &#x4F46;&#x662F;&#x51FA;&#x73B0;&#x4E86;&#x5E93;&#x5B58;&#x8D85;&#x5356;&#x7684;&#x73B0;&#x8C61;, &#x5373;&#x4E1A;&#x52A1;&#x5C42;&#x9762;&#x7684;&#x5F02;&#x5E38;</p>
+<p>&#x5982;&#x4F55;&#x907F;&#x514D;, &#x901A;&#x8FC7;&#x60B2;&#x89C2;&#x9501;&#xFF08;FOR UPDATE&#xFF09;&#x65B9;&#x5F0F;&#x5904;&#x7406;:</p>
+<pre><code>MariaDB [flask_restful]&gt; UPDATE t_products SET num=1;
+
+T Session A                                         Session B
+|
+| START TRANSACTION;                                START TRANSACTION;
+|
+| SELECT num FROM t_products WHERE id=1 FOR UPDATE;
+| +-----+
+| | num |
+| +-----+
+| |   1 |
+| +-----+
+|
+|                                                   SELECT num FROM t_products WHERE id=1 FOR UPDATE;
+|                                                   &#x7B49;&#x5F85;...&#x76F4;&#x5230;&#x8D85;&#x65F6;, &#x5F53;&#x5176;&#x4ED6;&#x4E8B;&#x7269;&#x63D0;&#x4EA4;&#x8FD4;&#x56DE;&#x66F4;&#x65B0;&#x540E;&#x7684;&#x7ED3;&#x679C;
+|
+| UPDATE t_products SET num=num-1 WHERE id=1 and num&gt;0;
+|
+| SELECT num FROM t_products WHERE id=1;
+| +-----+
+| | num |
+| +-----+
+| |   0 |
+| +-----+
+|
+| COMMIT;
+|
+|                                                   +-----+
+|                                                   | num |
+|                                                   +-----+
+|                                                   |   0 |
+|                                                   +-----+
+|
+|                                                   UPDATE t_products SET num=num-1 WHERE id=1 and num&gt;0;
+|
+|                                                   SELECT num FROM t_products WHERE id=1;
+|                                                   +-----+
+|                                                   | num |
+|                                                   +-----+
+|                                                   |   0 |
+|                                                   +-----+
+|
+|                                                   COMMIT;
+|
+-
+</code></pre><p>&#x901A;&#x8FC7;&#x60B2;&#x89C2;&#x9501;&#x7684;&#x65B9;&#x5F0F;, &#x53EF;&#x4EE5;&#x9632;&#x6B62;&#x9AD8;&#x5E76;&#x53D1;&#x573A;&#x666F;&#x4E0B;&#x7684;&#x8D85;&#x5356;&#x73B0;&#x8C61;</p>
+<p>&#x5982;&#x679C;&#x6307;&#x5B9A;&#x4E3B;&#x952E;, &#x4E3A;&#x884C;&#x7EA7;&#x522B;&#x9501;, &#x5426;&#x5219;&#x4E3A;&#x8868;&#x7EA7;&#x522B;&#x9501;</p>
+<h2 id="flask--sqlalchemy-&#x6D4B;&#x8BD5;">Flask + Sqlalchemy &#x6D4B;&#x8BD5;</h2>
+<ol>
+<li><p>&#x9ED8;&#x8BA4;&#x4E0D;&#x52A0;&#x9501;</p>
+<pre><code>inventory_obj = db.session.query(Inventory).filter(Inventory.id == inventory_id)
+import time
+time.sleep(2)
+if inventory_obj.one().stock_qty &gt;= num:
+ time.sleep(2)
+ data = {
+     &apos;stock_qty&apos;: Inventory.stock_qty - num
+ }
+ inventory_obj.update(data)
+ db.session.commit()
+return True
+</code></pre><p>&#x51FA;&#x73B0;&#x8D85;&#x5356;&#x73B0;&#x8C61;</p>
+</li>
+<li><p>&#x52A0;&#x60B2;&#x89C2;&#x9501;/&#x6392;&#x5B83;&#x9501;&#xFF08;with_for_update&#xFF09;</p>
+<pre><code>inventory_obj = db.session.query(Inventory).filter(Inventory.id == inventory_id)
+import time
+time.sleep(2)
+if inventory_obj.with_for_update().one().stock_qty &gt;= num:
+ time.sleep(2)
+ data = {
+     &apos;stock_qty&apos;: Inventory.stock_qty - num
+ }
+ inventory_obj.update(data)
+ db.session.commit()
+return True
+</code></pre><p>&#x4E00;&#x5207;&#x6B63;&#x5E38;, &#x6CA1;&#x6709;&#x8D85;&#x5356;, &#x4F1A;&#x963B;&#x585E;&#x5176;&#x5B83;&#x4E8B;&#x52A1;, &#x6027;&#x80FD;&#x8F83;&#x5DEE;</p>
+</li>
+</ol>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;<code>for update</code>&#x8981;&#x653E;&#x5230;<code>mysql</code>&#x7684;&#x4E8B;&#x52A1;&#x4E2D;&#xFF0C;&#x5373;<code>begin</code>&#x548C;<code>commit</code>&#x4E2D;&#xFF0C;&#x5426;&#x8005;&#x4E0D;&#x8D77;&#x4F5C;&#x7528;&#x3002;</p>
+<ol>
+<li>&#x4E50;&#x89C2;&#x9501;</li>
+</ol>
+<p>&#x901A;&#x8FC7;&#x7248;&#x672C;&#x673A;&#x5236;&#x5B9E;&#x73B0;&#x4E50;&#x89C2;&#x9501;</p>
+<pre><code class="lang-mysql">update table set x=x+1, version=version+1 where id=#{id} and version=#{version};
+</code></pre>
+<ol>
+<li>&#x5206;&#x5E03;&#x5F0F;&#x9501;</li>
+</ol>
+<p>&#x5F88;&#x591A;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5BF9;&#x67D0;&#x4E00;&#x4E2A;&#x5171;&#x4EAB;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x591A;&#x7EBF;&#x7A0B;/&#x591A;&#x8FDB;&#x7A0B;&#x540C;&#x6B65;&#x8BBF;&#x95EE;</p>
+<p>&#x4E3A;&#x4E86;&#x786E;&#x4FDD;&#x5206;&#x5E03;&#x5F0F;&#x9501;&#x53EF;&#x7528;&#xFF0C;&#x6211;&#x4EEC;&#x81F3;&#x5C11;&#x8981;&#x786E;&#x4FDD;&#x9501;&#x7684;&#x5B9E;&#x73B0;&#x540C;&#x65F6;&#x6EE1;&#x8DB3;&#x4EE5;&#x4E0B;&#x56DB;&#x4E2A;&#x6761;&#x4EF6;&#xFF1A;</p>
+<pre><code>&#x4E92;&#x65A5;&#x6027;&#x3002;&#x5728;&#x4EFB;&#x610F;&#x65F6;&#x523B;&#xFF0C;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x80FD;&#x6301;&#x6709;&#x9501;&#x3002;
+&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x6B7B;&#x9501;&#x3002;&#x5373;&#x4F7F;&#x6709;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x5728;&#x6301;&#x6709;&#x9501;&#x7684;&#x671F;&#x95F4;&#x5D29;&#x6E83;&#x800C;&#x6CA1;&#x6709;&#x4E3B;&#x52A8;&#x89E3;&#x9501;&#xFF0C;&#x4E5F;&#x80FD;&#x4FDD;&#x8BC1;&#x540E;&#x7EED;&#x5176;&#x4ED6;&#x5BA2;&#x6237;&#x7AEF;&#x80FD;&#x52A0;&#x9501;&#x3002;
+&#x5177;&#x6709;&#x5BB9;&#x9519;&#x6027;&#x3002;&#x53EA;&#x8981;&#x5927;&#x90E8;&#x5206;&#x7684;Redis&#x8282;&#x70B9;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x5C31;&#x53EF;&#x4EE5;&#x52A0;&#x9501;&#x548C;&#x89E3;&#x9501;&#x3002;
+&#x89E3;&#x94C3;&#x8FD8;&#x987B;&#x7CFB;&#x94C3;&#x4EBA;&#x3002;&#x52A0;&#x9501;&#x548C;&#x89E3;&#x9501;&#x5FC5;&#x987B;&#x662F;&#x540C;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x81EA;&#x5DF1;&#x4E0D;&#x80FD;&#x628A;&#x522B;&#x4EBA;&#x52A0;&#x7684;&#x9501;&#x7ED9;&#x89E3;&#x4E86;&#x3002;
+</code></pre><ul>
+<li>Redis &#x65B9;&#x6848;</li>
+</ul>
+<pre><code>127.0.0.1:6379&gt; SETNX lock_key request_id
+(integer) 1
+127.0.0.1:6379&gt; SETNX lock_key 2018
+(integer) 0
+127.0.0.1:6379&gt; TTL lock_key
+(integer) -1
+127.0.0.1:6379&gt; EXPIRE lock_key 10
+(integer) 1
+127.0.0.1:6379&gt; TTL lock_key
+(integer) 9
+127.0.0.1:6379&gt; DEL lock_key
+(integer) 1
+127.0.0.1:6379&gt; DEL lock_key
+(integer) 0
+127.0.0.1:6379&gt; TTL lock_key
+(integer) -2
+</code></pre><table>
+<thead>
+<tr>
+<th>&#x9501;&#x64CD;&#x4F5C;&#x540D;&#x79F0;</th>
+<th>redis&#x64CD;&#x4F5C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x83B7;&#x53D6;&#x9501;</td>
+<td>SETNX</td>
+</tr>
+<tr>
+<td>&#x91CA;&#x653E;&#x9501;</td>
+<td>DEL</td>
+</tr>
+<tr>
+<td>&#x9632;&#x6B7B;&#x9501;</td>
+<td>EXPIRE</td>
+</tr>
+</tbody>
+</table>
+<p>&#x4EE5;&#x4E0A;&#x65B9;&#x6848;&#x770B;&#x8D77;&#x6765;&#x4E0D;&#x9519;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#x95EE;&#x9898;:</p>
+<ol>
+<li><code>SETNX</code>&#x4E0E;<code>EXPIRE</code>&#x662F;2&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x4E0D;&#x662F;&#x539F;&#x5B50;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4E2D;&#x95F4;&#x5D29;&#x6E83;&#xFF0C;&#x5C06;&#x4F1A;&#x6B7B;&#x9501;</li>
+<li>&#x5148;&#x62FF;&#x5230;&#x9501;&#x7684;&#x4E8B;&#x52A1;&#xFF0C;&#x5982;&#x679C;&#x4E8B;&#x52A1;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x8D85;&#x8FC7;&#x9501;&#x8FC7;&#x671F;&#x65F6;&#x95F4;&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;&#x9501;&#x88AB;&#x62A2;&#x5360;</li>
+</ol>
+<p>&#x6539;&#x8FDB;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x9501;&#x64CD;&#x4F5C;&#x540D;&#x79F0;</th>
+<th>redis&#x64CD;&#x4F5C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x83B7;&#x53D6;&#x9501;</td>
+<td>SET(NX, EX) &#x5C06;2&#x4E2A;&#x64CD;&#x4F5C;&#x53D8;&#x6210;&#x4E00;&#x4E2A;&#x539F;&#x5B50;&#x64CD;&#x4F5C;</td>
+</tr>
+<tr>
+<td>&#x91CA;&#x653E;&#x9501;</td>
+<td>DEL</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Etcd &#x65B9;&#x6848;</li>
+</ul>
+<p>TODO</p>
+<h2 id="&#x6B7B;&#x9501;">&#x6B7B;&#x9501;</h2>
+<p>&#x8BF4;&#x5230;&#x9501;, &#x5FC5;&#x7136;&#x8981;&#x8003;&#x8651;&#x6B7B;&#x9501;&#x7684;&#x60C5;&#x51B5;</p>
+<p>&#x5E94;&#x907F;&#x514D;&#x975E;&#x4E3B;&#x952E;&#x6761;&#x4EF6;&#x7684;&#x66F4;&#x65B0;&#x64CD;&#x4F5C;</p>
+<h2 id="oltp-&#x548C;-olap">OLTP &#x548C; OLAP</h2>
+<ul>
+<li>OLTP On-Line Transaction Processing &#x8054;&#x673A;&#x4E8B;&#x52A1;&#x5904;&#x7406;</li>
+<li>OLAP On-Line Analytical Processing &#x8054;&#x673A;&#x5206;&#x6790;&#x5904;&#x7406;</li>
+</ul>
+<p>&#x5DF2;&#x6709;&#x7684;&#x4E24;&#x4E2A;&#x4E3B;&#x6D41;&#x5F00;&#x6E90;&#x6570;&#x636E;&#x5E93;&#xFF0C;MySQL&#x548C;PostgreSQL&#x90FD;&#x662F;&#x9488;&#x5BF9;OLTP&#x73AF;&#x5883;&#x7684;&#xFF0C;&#x5728;OLAP&#x5728;&#x7EBF;&#x5206;&#x6790;&#x9700;&#x6C42;&#x4E0B;&#x5B83;&#x4EEC;&#x7684;&#x6027;&#x80FD;&#x660E;&#x663E;&#x4E0D;&#x8DB3;&#x3002;</p>
+<h2 id="etl">ETL</h2>
+<p>ETL&#xFF0C;Extraction-Transformation-Loading&#x7684;&#x7F29;&#x5199;&#xFF0C;&#x5373;&#x6570;&#x636E;&#x62BD;&#x53D6;&#xFF08;Extract&#xFF09;&#x3001;&#x8F6C;&#x6362;&#xFF08;Transform&#xFF09;&#x3001;&#x88C5;&#x8F7D;&#xFF08;Load&#xFF09;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x5B83;&#x662F;&#x6784;&#x5EFA;&#x6570;&#x636E;&#x4ED3;&#x5E93;&#x7684;&#x91CD;&#x8981;&#x73AF;&#x8282;&#x3002;</p>
+<h2 id="innodb&#x4E8B;&#x52A1;&#x9501;&#x76F8;&#x5173;&#x7684;&#x4E09;&#x4E2A;&#x8868;&#xFF1A;innodbtrx&#x3001;innodblocks&#x3001;innodblockwaits">Innodb&#x4E8B;&#x52A1;&#x9501;&#x76F8;&#x5173;&#x7684;&#x4E09;&#x4E2A;&#x8868;&#xFF1A;<code>INNODB_TRX</code>&#x3001;<code>INNODB_LOCKS</code>&#x3001;<code>INNODB_LOCK_WAITS</code></h2>
+<p><code>INNODB_TRX</code>&#x8868;&#x4E3B;&#x8981;&#x662F;&#x5305;&#x542B;&#x4E86;&#x6B63;&#x5728;InnoDB&#x5F15;&#x64CE;&#x4E2D;&#x6267;&#x884C;&#x7684;&#x6240;&#x6709;&#x4E8B;&#x52A1;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;<code>waiting for a lock</code>&#x548C;<code>running</code>&#x7684;&#x4E8B;&#x52A1;</p>
+<pre><code class="lang-mysql">SELECT * FROM information_schema.INNODB_TRX\G
+</code></pre>
+<p><code>INNODB_LOCKS</code>&#x8868;&#x4E3B;&#x8981;&#x5305;&#x542B;&#x4E86;InnoDB&#x4E8B;&#x52A1;&#x9501;&#x7684;&#x5177;&#x4F53;&#x60C5;&#x51B5;&#xFF0C;&#x5305;&#x62EC;&#x4E8B;&#x52A1;&#x6B63;&#x5728;&#x7533;&#x8BF7;&#x52A0;&#x7684;&#x9501;&#x548C;&#x4E8B;&#x52A1;&#x52A0;&#x4E0A;&#x7684;&#x9501;&#x3002;</p>
+<pre><code class="lang-mysql">SELECT * FROM information_schema.INNODB_LOCKS\G
+</code></pre>
+<p><code>INNODB_LOCK_WAITS</code>&#x8868;&#x5305;&#x542B;&#x4E86;<code>blocked</code>&#x7684;&#x4E8B;&#x52A1;&#x7684;&#x9501;&#x7B49;&#x5F85;&#x7684;&#x72B6;&#x6001;</p>
+<pre><code class="lang-mysql">SELECT * FROM information_schema.INNODB_LOCK_WAITS\G
+</code></pre>
+<h2 id="&#x7F13;&#x5B58;">&#x7F13;&#x5B58;</h2>
+<pre><code>MariaDB [None]&gt; show variables like &apos;%query_cache%&apos;;
++------------------------------+----------+
+| Variable_name                | Value    |
++------------------------------+----------+
+| have_query_cache             | YES      |
+| query_cache_limit            | 131072   |
+| query_cache_min_res_unit     | 4096     |
+| query_cache_size             | 67108864 |
+| query_cache_strip_comments   | OFF      |
+| query_cache_type             | ON       |
+| query_cache_wlock_invalidate | OFF      |
++------------------------------+----------+
+7 rows in set (0.00 sec)
+</code></pre><ul>
+<li><p>mysql &#x6709;&#x67E5;&#x8BE2;&#x7F13;&#x5B58;, &#x8C03;&#x8BD5;&#x65F6;&#x9700;&#x8981;&#x5173;&#x95ED;&#x67E5;&#x8BE2;&#x7F13;&#x5B58;</p>
+<pre><code class="lang-mysql">EXPLAIN SELECT * FROM `table_name` WHERE field_name=&quot;test&quot;;
+SELECT SQL_NO_CACHE * FROM `table_name` WHERE field_name=&quot;test&quot;;
+</code></pre>
+</li>
+<li><p>postgres &#x6CA1;&#x6709;&#x67E5;&#x8BE2;&#x7F13;&#x5B58;, &#x4F7F;&#x7528;&#x7684;&#x662F;&#x7CFB;&#x7EDF;&#x7F13;&#x5B58;<code>/proc/sys/vm/drop_caches</code></p>
+</li>
+</ul>
+<pre><code class="lang-bash">sync; sudo service postgresql stop; <span class="hljs-built_in">echo</span> 1 &gt; /proc/sys/vm/drop_caches; sudo service postgresql start
+</code></pre>
+<pre><code class="lang-postgresql">EXPLAIN (buffers, analyze, verbose) SELECT * FROM table_name WHERE field_name=&quot;test&quot;;
+</code></pre>
+<h2 id="&#x7D22;&#x5F15;">&#x7D22;&#x5F15;</h2>
+<p>1&#x3001;&#x8054;&#x5408;&#x7D22;&#x5F15;&#xFF0C;&#x6700;&#x5DE6;&#x539F;&#x5219;&#xFF1A;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;(a,b,c)&#x7684;&#x590D;&#x5408;&#x7D22;&#x5F15;&#xFF0C;&#x90A3;&#x4E48;&#x5B9E;&#x9645;&#x7B49;&#x4E8E;&#x5EFA;&#x4E86;(a),(a,b),(a,b,c)&#x4E09;&#x4E2A;&#x7D22;&#x5F15;
+2&#x3001;&#x7D22;&#x5F15;&#x7C7B;&#x578B;&#xFF0C;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x503C;&#x7C7B;&#x578B;&#x5FC5;&#x987B;&#x4E0E;&#x5B9A;&#x4E49;&#x4E00;&#x81F4;&#xFF0C;&#x7279;&#x522B;&#x6CE8;&#x610F;&#x6570;&#x503C;&#x7C7B;&#x578B;&#x548C;&#x5B57;&#x7B26;&#x7C7B;&#x578B;</p>
+<h2 id="&#x6392;&#x9519;">&#x6392;&#x9519;</h2>
+<h3 id="sqlalchemyexcoperationalerror">sqlalchemy.exc.OperationalError</h3>
+<p>OperationalError: (_mysql_exceptions.OperationalError) (2006, &apos;MySQL server has gone away&apos;)</p>
+<p>MySQL &#x63D0;&#x524D;&#x56DE;&#x6536;&#x4E86;&#x7A7A;&#x95F2;&#x8FDE;&#x63A5;&#xFF0C;&#x4E0E;&#x8FDE;&#x63A5;&#x6C60;&#x914D;&#x7F6E;&#x6CA1;&#x6709;&#x534F;&#x8C03;&#x597D;&#xFF0C;&#x4E00;&#x822C;&#x957F;&#x65F6;&#x95F4;&#x95F2;&#x7F6E;&#x4E4B;&#x540E;&#x7684;&#x7B2C;&#x4E00;&#x6B21;&#x8FDE;&#x63A5;&#x4F1A;&#x51FA;&#x73B0;&#x8FD9;&#x79CD;&#x9519;&#x8BEF;&#x3002;</p>
+<p>&#x68C0;&#x67E5;&#x914D;&#x7F6E;</p>
+<pre><code>MariaDB [flask_project]&gt; show global variables like &quot;%timeout%&quot;;
++-----------------------------+----------+
+| Variable_name               | Value    |
++-----------------------------+----------+
+| connect_timeout             | 5        |
+| deadlock_timeout_long       | 50000000 |
+| deadlock_timeout_short      | 10000    |
+| delayed_insert_timeout      | 300      |
+| innodb_flush_log_at_timeout | 1        |
+| innodb_lock_wait_timeout    | 50       |
+| innodb_rollback_on_timeout  | OFF      |
+| interactive_timeout         | 28800    |
+| lock_wait_timeout           | 31536000 |
+| net_read_timeout            | 30       |
+| net_write_timeout           | 60       |
+| slave_net_timeout           | 3600     |
+| thread_pool_idle_timeout    | 60       |
+| wait_timeout                | 600      |
++-----------------------------+----------+
+14 rows in set (0.00 sec)
+</code></pre><p>&#x67E5;&#x770B;&#x8FDE;&#x63A5;&#x60C5;&#x51B5;</p>
+<pre><code>MariaDB [flask_project]&gt; show full processlist;
++-----+------+------------------+---------------+---------+------+-------+------------------+----------+
+| Id  | User | Host             | db            | Command | Time | State | Info             | Progress |
++-----+------+------------------+---------------+---------+------+-------+------------------+----------+
+| 176 | root | 172.17.0.5:46672 | flask_project | Query   |    0 | init  | show processlist |    0.000 |
+| 180 | root | 172.17.0.1:39592 | flask_project | Sleep   |  284 |       | NULL             |    0.000 |
++-----+------+------------------+---------------+---------+------+-------+------------------+----------+
+2 rows in set (0.00 sec)
+</code></pre><p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x6253;&#x5F00;&#x7684;&#x8FDE;&#x63A5;&#x7684;&#x6570;&#x91CF;</p>
+<pre><code>MariaDB [flask_project]&gt; show status like &apos;%Threads_connected%&apos;;
++-------------------+-------+
+| Variable_name     | Value |
++-------------------+-------+
+| Threads_connected | 2     |
++-------------------+-------+
+1 row in set (0.01 sec)
+</code></pre><p>&#x4FEE;&#x6539;&#x8FDE;&#x63A5;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF08;&#x6D4B;&#x8BD5;&#xFF09;</p>
+<pre><code>MariaDB [flask_project]&gt; set global wait_timeout=6;
+</code></pre><pre><code>MariaDB [flask_project]&gt; show global variables like &apos;wait_timeout&apos;;
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| wait_timeout  | 600   |
++---------------+-------+
+1 row in set (0.00 sec)
+MariaDB [flask_project]&gt; show variables like &apos;wait_timeout&apos;;
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| wait_timeout  | 28800 |
++---------------+-------+
+1 row in set (0.00 sec)
+MariaDB [flask_project]&gt; show global status like &apos;uptime&apos;;
++---------------+--------+
+| Variable_name | Value  |
++---------------+--------+
+| Uptime        | 204519 |
++---------------+--------+
+1 row in set (0.00 sec)
+
+MariaDB [flask_project]&gt; show global variables like &apos;max_allowed_packet&apos;;
++--------------------+----------+
+| Variable_name      | Value    |
++--------------------+----------+
+| max_allowed_packet | 16777216 |
++--------------------+----------+
+1 row in set (0.00 sec)
+</code></pre><p>&#x9519;&#x8BEF;&#x91CD;&#x73B0;:</p>
+<p>&#x5F53;&#x6709;&#x4E8B;&#x52A1;&#x6CA1;&#x6709;&#x63D0;&#x4EA4;&#x6216;&#x8005;&#x6CA1;&#x6709;&#x56DE;&#x6EDA;&#x65F6;&#xFF0C;sqlalchemy &#x7684;&#x8FDE;&#x63A5;&#x56DE;&#x6536;&#x65F6;&#x95F4;&#xFF08;SQLALCHEMY_POOL_RECYCLE&#xFF09;&#x5927;&#x4E8E;&#x6570;&#x636E;&#x5E93;&#x5173;&#x95ED;&#x7B49;&#x5F85;&#x8FDE;&#x63A5;&#x65F6;&#x95F4;&#xFF08;global wait_timeout&#xFF09;&#xFF1B;</p>
+<p>&#x4E00;&#x65E6;&#x6570;&#x636E;&#x5E93;&#x8FDE;&#x63A5;&#x8D85;&#x65F6;&#x81EA;&#x52A8;&#x65AD;&#x5F00;&#xFF0C;&#x6B64;&#x65F6; sqlalchemy &#x5C1D;&#x8BD5;&#x8FDE;&#x63A5;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4F1A;&#x51FA;&#x73B0; OperationalError: (_mysql_exceptions.OperationalError) (2006, &apos;MySQL server has gone away&apos;)</p>
+<p>&#x5904;&#x7406;&#x65B9;&#x6848;:</p>
+<ol>
+<li>sqlalchemy &#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4; &#x5C0F;&#x4E8E; &#x6570;&#x636E;&#x5E93;&#x7684;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</li>
+<li>&#x4EE3;&#x7801;&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x7ACB;&#x5373;&#x63D0;&#x4EA4;&#x4E8B;&#x52A1;&#xFF0C;&#x9519;&#x8BEF;&#x56DE;&#x6EDA;</li>
+</ol>
+<p>&#x5B98;&#x65B9;&#x8BF4;&#x660E;:</p>
+<p><a href="http://flask-sqlalchemy.pocoo.org/2.2/config/#timeouts" target="_blank">http://flask-sqlalchemy.pocoo.org/2.2/config/#timeouts</a></p>
+<h3 id="mysqldbexceptionsoperationalerror">MySQLdb._exceptions.OperationalError</h3>
+<p>(MySQLdb._exceptions.OperationalError) (2013, &apos;Lost connection to MySQL server during query&apos;)</p>
+<pre><code>MariaDB [bearing_project]&gt; SHOW GLOBAL VARIABLES LIKE &apos;wait_timeout&apos;;
++---------------+-------+
+| Variable_name | Value |
++---------------+-------+
+| wait_timeout  | 600   |
++---------------+-------+
+1 row in set (0.00 sec)
+
+MariaDB [bearing_project]&gt; SET GLOBAL wait_timeout=5;
+Query OK, 0 rows affected (0.00 sec)
+</code></pre><p>&#x9519;&#x8BEF;&#x91CD;&#x73B0;:</p>
+<p>&#x5F53;&#x4E8B;&#x52A1;&#x5904;&#x7406;&#x65F6;&#x95F4;&#x8FC7;&#x957F;&#xFF0C;&#x8D85;&#x8FC7;<code>wait_timeout</code>&#x65F6;&#x95F4;&#xFF0C;&#x4F1A;&#x51FA;&#x73B0;(MySQLdb._exceptions.OperationalError) (2013, &apos;Lost connection to MySQL server during query&apos;)</p>
+<h3 id="sqlalchemyexcinvalidrequesterror">sqlalchemy.exc.InvalidRequestError</h3>
+<p>StatementError: (sqlalchemy.exc.InvalidRequestError) Can&apos;t reconnect until invalid transaction is rolled back</p>
+<p>&#x4E00;&#x65E6;&#x51FA;&#x73B0;&#x524D;&#x9762;2&#x79CD;&#x60C5;&#x51B5;&#xFF0C;&#x518D;&#x6B21;&#x8BF7;&#x6C42;,<code>sqlalchemy</code>&#x4F1A;&#x62A5;&#x9519;</p>
+<h3 id="innodb-cannot-allocate-memory-for-the-buffer-pool">InnoDB: Cannot allocate memory for the buffer pool</h3>
+<p>&#x5185;&#x5B58;&#x4E0D;&#x8DB3;&#x5BFC;&#x81F4;&#x9519;&#x8BEF;</p>
+<pre><code># free -m
+              total        used        free      shared  buff/cache   available
+Mem:           1838        1549          70           0         217         118
+Swap:             0           0           0
+</code></pre><pre><code>MariaDB [bearing_project]&gt; show global variables like &apos;innodb_buffer_pool_size&apos;;
++-------------------------+-----------+
+| Variable_name           | Value     |
++-------------------------+-----------+
+| innodb_buffer_pool_size | 268435456 |
++-------------------------+-----------+
+1 row in set (0.00 sec)
+</code></pre><h3 id="specified-key-was-too-long-max-key-length-is-767-bytes">Specified key was too long; max key length is 767 bytes</h3>
+<p>MySQL&#x5728;&#x5927;&#x5B57;&#x6BB5;&#x4E0A;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#x65F6;&#xFF0C;&#x5076;&#x5C14;&#x4F1A;&#x9047;&#x5230;&#x5982;&#x4E0B;&#x9519;&#x8BEF;&#x3002;</p>
+<pre><code>Specified key was too long; max key length is 767 bytes
+</code></pre><p>&#x4F8B;&#x5982;&#x5B89;&#x88C5; django-celery &#x540E;&#x914D;&#x7F6E;&#x6570;&#x636E;&#x5E93;&#x65F6;&#x62A5;&#x9519;</p>
+<pre><code>django.db.utils.OperationalError: (1071, &apos;Specified key was too long; max key length is 767 bytes&apos;)
+</code></pre><p>&#x95EE;&#x9898;&#x539F;&#x56E0;</p>
+<p>&#x7531;&#x4E8E;MySQL&#x7684;InnoDB&#x5F15;&#x64CE;&#x8868;&#x7D22;&#x5F15;&#x5B57;&#x6BB5;&#x957F;&#x5EA6;&#x7684;&#x9650;&#x5236;&#x4E3A;767&#x5B57;&#x8282;&#xFF0C;&#x56E0;&#x6B64;&#x5BF9;&#x4E8E;&#x591A;&#x5B57;&#x8282;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x5927;&#x5B57;&#x6BB5;&#x6216;&#x8005;&#x591A;&#x5B57;&#x6BB5;&#x7EC4;&#x5408;&#xFF0C;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#x65F6;&#x4F1A;&#x51FA;&#x73B0;&#x8BE5;&#x95EE;&#x9898;&#x3002;</p>
+<pre><code>&#x8BF4;&#x660E;&#xFF1A;&#x4EE5;utf8mb4&#x5B57;&#x7B26;&#x96C6;&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#x4E3A;&#x4F8B;&#x3002;
+utf8mb4&#x662F;4&#x5B57;&#x8282;&#x5B57;&#x7B26;&#x96C6;&#xFF0C;&#x9ED8;&#x8BA4;&#x652F;&#x6301;&#x7684;&#x7D22;&#x5F15;&#x5B57;&#x6BB5;&#x6700;&#x5927;&#x957F;&#x5EA6;&#x662F;191&#x5B57;&#x7B26;&#xFF08;767&#x5B57;&#x8282;/4&#x5B57;&#x8282;&#x6BCF;&#x5B57;&#x7B26;&#x2248;191&#x5B57;&#x7B26;&#xFF09;&#xFF0C;&#x56E0;&#x6B64;&#x5728;varchar(255)&#x6216;char(255)&#x7C7B;&#x578B;&#x5B57;&#x6BB5;&#x4E0A;&#x521B;&#x5EFA;&#x7D22;&#x5F15;&#x4F1A;&#x5931;&#x8D25;&#x3002;
+&#x8BE6;&#x60C5;&#x8BF7;&#x53C2;&#x89C1;[MySQL&#x5B98;&#x7F51;&#x6587;&#x6863;](https://dev.mysql.com/doc/refman/5.6/en/charset-unicode-utf8mb4.html?spm=a2c4g.11186623.2.14.4c247177s7YQCS)&#x3002;
+</code></pre><p>&#x89E3;&#x51B3;&#x65B9;&#x6848;</p>
+<p><code>SET GLOBAL innodb_large_prefix = ON;</code></p>
+<pre><code>MariaDB [school_project]&gt; SHOW GLOBAL VARIABLES LIKE &apos;innodb_large_prefix&apos;;
++---------------------+-------+
+| Variable_name       | Value |
++---------------------+-------+
+| innodb_large_prefix | OFF   |
++---------------------+-------+
+1 row in set (0.004 sec)
+
+MariaDB [school_project]&gt; SET GLOBAL innodb_large_prefix = ON;
+Query OK, 0 rows affected (0.004 sec)
+</code></pre><h3 id="index-column-size-too-large-the-maximum-column-size-is-767-bytes">Index column size too large. The maximum column size is 767 bytes.</h3>
+<p>&#x62A5;&#x9519;&#x4E3B;&#x8981;&#x51FA;&#x5728;mysql5.6&#x7248;&#x672C;&#x548C;MariaDB10&#xFF0C;&#x6539;&#x53C2;&#x6570;&#x4EC0;&#x4E48;&#x5C31;&#x4E0D;&#x597D;&#x4F7F;&#x4E86;&#xFF0C;&#x6700;&#x76F4;&#x63A5;&#x7684;&#x5C31;&#x662F;&#x4FEE;&#x6539;CHARACTER&#x548C;COLLATE&#xFF0C;&#x5C06;utf8mb4&#x6539;&#x4E3A;utf8</p>
+<p><code>DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci</code></p>
+<h2 id="&#x8C03;&#x4F18;">&#x8C03;&#x4F18;</h2>
+<ul>
+<li>&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x53EA;&#x5BF9;&#x975E;&#x6D3B;&#x52A8;&#x72B6;&#x6001;&#x7684;connection&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x3002;</li>
+<li>&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x53EA;&#x4EE5;session&#x7EA7;&#x522B;&#x7684;wait_timeout &#x4E3A;&#x8D85;&#x65F6;&#x4F9D;&#x636E;&#xFF0C;global&#x7EA7;&#x522B;&#x53EA;&#x51B3;&#x5B9A;session&#x521D;&#x59CB;&#x5316;&#x65F6;&#x7684;&#x8D85;&#x65F6;&#x9ED8;&#x8BA4;&#x503C;&#x3002;</li>
+<li>&#x4EA4;&#x4E92;&#x5F0F;&#x8FDE;&#x63A5;&#x7684;wait_timeout &#x7EE7;&#x627F;&#x4E8E;global&#x7684;interactive_timeout&#x3002;&#x975E;&#x4EA4;&#x4E92;&#x5F0F;&#x8FDE;&#x63A5;&#x7684;wait_timeout&#x7EE7;&#x627F;&#x4E8E;global&#x7684;wait_timeout</li>
+<li>&#x7EE7;&#x627F;&#x5173;&#x7CFB;&#x548C;&#x8D85;&#x65F6;&#x5BF9; TCP/IP &#x548C; Socket &#x8FDE;&#x63A5;&#x5747;&#x6709;&#x6548;&#x679C;</li>
+</ul>
+<p>&#x67E5;&#x770B;&#x5F53;&#x524D;&#x8FDE;&#x63A5;&#x6570;</p>
+<pre><code>MariaDB [bearing_project]&gt; show status like &apos;Threads%&apos;;
++-------------------+-------+
+| Variable_name     | Value |
++-------------------+-------+
+| Threads_cached    | 8     |
+| Threads_connected | 1     |
+| Threads_created   | 9     |
+| Threads_running   | 1     |
++-------------------+-------+
+4 rows in set (0.00 sec)
+</code></pre><p>&#x6700;&#x5927;&#x8FDE;&#x63A5;&#x6570;</p>
+<pre><code>MariaDB [bearing_project]&gt; show variables like &apos;%max_connections%&apos;;
++-----------------------+-------+
+| Variable_name         | Value |
++-----------------------+-------+
+| extra_max_connections | 1     |
+| max_connections       | 100   |
++-----------------------+-------+
+2 rows in set (0.00 sec)
+</code></pre><p>&#x4FEE;&#x6539;</p>
+<pre><code>set global max_connections = 1000;
+</code></pre><h2 id="sqlalchemy-&#x6700;&#x4F73;&#x5B9E;&#x8DF5;">sqlalchemy &#x6700;&#x4F73;&#x5B9E;&#x8DF5;</h2>
+<p>&#x6839;&#x636E;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#xFF1A;</p>
+<ul>
+<li><p>&#x7F51;&#x9875;&#x5E94;&#x7528;
+&#x5904;&#x7406;&#x65F6;&#x95F4;&#x77ED;&#xFF0C;&#x5E76;&#x53D1;&#x91CF;&#x9AD8;&#xFF0C;&#x903B;&#x8F91;&#xFF08;&#x4E8B;&#x52A1;&#xFF09;&#x5904;&#x7406;&#x5FEB;&#xFF0C;&#x6BCF;&#x6B21;&#x6570;&#x636E;&#x64CD;&#x4F5C;&#xFF0C;&#x53EF;&#x901A;&#x8FC7;&#x8FDE;&#x63A5;&#x6C60;&#x590D;&#x7528;&#xFF0C;&#x77ED;&#x671F;&#x4E4B;&#x5185;&#x8FDE;&#x63A5;&#x4E0D;&#x4F1A;&#x56DE;&#x6536;</p>
+</li>
+<li><p>&#x4EFB;&#x52A1;&#x811A;&#x672C;
+&#x5904;&#x7406;&#x65F6;&#x95F4;&#x957F;&#xFF0C;&#x5E76;&#x53D1;&#x91CF;&#x4F4E;&#xFF0C;&#x903B;&#x8F91;&#xFF08;&#x4E8B;&#x52A1;&#xFF09;&#x5904;&#x7406;&#x6162;&#xFF0C;&#x6BCF;&#x6B21;&#x6570;&#x636E;&#x64CD;&#x4F5C;&#xFF0C;&#x6700;&#x597D;&#x5F00;&#x542F;&#x72EC;&#x7ACB;&#x8FDE;&#x63A5;&#xFF0C;&#x9632;&#x6B62;&#x5386;&#x53F2;&#x8FDE;&#x63A5;&#x4F1A;&#x88AB;&#x56DE;&#x6536;
+&#x907F;&#x514D;&#x4E8B;&#x52A1;&#x8017;&#x65F6;&#x8FC7;&#x957F;&#xFF0C;&#x63A7;&#x5236;&#x5355;&#x4E2A;&#x8FDE;&#x63A5;&#x5904;&#x7406;&#x65F6;&#x95F4;</p>
+</li>
+</ul>
+<h2 id="&#x67E5;&#x8BE2;&#x9875;&#x5927;&#x5C0F;">&#x67E5;&#x8BE2;&#x9875;&#x5927;&#x5C0F;</h2>
+<p>InnoDB&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x4E2D;&#x6709;&#x9875;&#xFF08;Page&#xFF09;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x9875;&#x662F;&#x5176;&#x78C1;&#x76D8;&#x7BA1;&#x7406;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x4F4D;&#x3002;InnoDB&#x5B58;&#x50A8;&#x5F15;&#x64CE;&#x4E2D;&#x9ED8;&#x8BA4;&#x6BCF;&#x4E2A;&#x9875;&#x7684;&#x5927;&#x5C0F;&#x4E3A;16KB</p>
+<pre><code>MariaDB [bearing_project]&gt; show variables like &apos;innodb_page_size&apos;;
++------------------+-------+
+| Variable_name    | Value |
++------------------+-------+
+| innodb_page_size | 16384 |
++------------------+-------+
+1 row in set (0.01 sec)
+</code></pre><h2 id="sqlmode">sql_mode</h2>
+<pre><code>MariaDB [(none)]&gt; select @@GLOBAL.sql_mode;
++--------------------------------------------+
+| @@GLOBAL.sql_mode                          |
++--------------------------------------------+
+| NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION |
++--------------------------------------------+
+1 row in set (0.002 sec)
+MariaDB [(none)]&gt; select @@SESSION.sql_mode;
++--------------------------------------------+
+| @@SESSION.sql_mode                         |
++--------------------------------------------+
+| NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION |
++--------------------------------------------+
+1 row in set (0.004 sec)
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Keepalived.html" class="navigation navigation-prev " aria-label="Previous page: Keepalived">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="MongoDB.html" class="navigation navigation-next " aria-label="Next page: MongoDB">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"MariaDB","level":"1.3.2","depth":2,"next":{"title":"MongoDB","level":"1.3.3","depth":2,"path":"Components/MongoDB.md","ref":"Components/MongoDB.md","articles":[]},"previous":{"title":"Keepalived","level":"1.3.1","depth":2,"path":"Components/Keepalived.md","ref":"Components/Keepalived.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","-sharing","sharing-plus","todo","mermaid-full@>=0.5.1","mathjax-full@>=0.6.2","donate","flexible-alerts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mathjax-full":{},"todo":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"/docs/images/qr_alipay.png","alipayText":"支付宝捐赠","button":"支持作者","title":"","wechat":"/docs/images/qr_wechat.png","wechatText":"微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-full":{},"highlight":{},"back-to-top-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"sharing":{"douban":true,"qq":true,"qzone":true,"weibo":true,"google":false,"facebook":false,"whatsapp":false,"all":["weibo","qzone","qq","douban","google","linkedin","twitter","facebook","whatsapp"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"空ping子","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"技术文档","language":"zh-hans","gitbook":"*"},"file":{"path":"Components/MariaDB.md","mtime":"2021-02-08T01:47:52.423Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-08T01:48:09.671Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-full/mermaidAPI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-full/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax-full/config.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax-full/mathjax.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

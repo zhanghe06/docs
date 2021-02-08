@@ -1,0 +1,1013 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>RabbitMQ · 技术文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="空ping子">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-full/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-donate/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-flexible-alerts/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Redis.html" />
+    
+    
+    <link rel="prev" href="PostgreSQL.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../Cloud/">
+            
+                <a href="../Cloud/">
+            
+                    
+                    云服务 (Cloud Server)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../Cloud/Aliyun.html">
+            
+                <a href="../Cloud/Aliyun.html">
+            
+                    
+                    Aliyun
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../Cloud/Tencent.html">
+            
+                <a href="../Cloud/Tencent.html">
+            
+                    
+                    Tencent
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../Cloud/Vultr.html">
+            
+                <a href="../Cloud/Vultr.html">
+            
+                    
+                    Vultr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    组件 (Components)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Keepalived.html">
+            
+                <a href="Keepalived.html">
+            
+                    
+                    Keepalived
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="MariaDB.html">
+            
+                <a href="MariaDB.html">
+            
+                    
+                    MariaDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="MongoDB.html">
+            
+                <a href="MongoDB.html">
+            
+                    
+                    MongoDB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="MSSqlServer.html">
+            
+                <a href="MSSqlServer.html">
+            
+                    
+                    MSSqlServer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="MySQL.html">
+            
+                <a href="MySQL.html">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="PostgreSQL.html">
+            
+                <a href="PostgreSQL.html">
+            
+                    
+                    PostgreSQL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.7" data-path="RabbitMQ.html">
+            
+                <a href="RabbitMQ.html">
+            
+                    
+                    RabbitMQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="Redis.html">
+            
+                <a href="Redis.html">
+            
+                    
+                    Redis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="Sqlite.html">
+            
+                <a href="Sqlite.html">
+            
+                    
+                    Sqlite
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Algorithm/">
+            
+                <a href="../Algorithm/">
+            
+                    
+                    算法 (Algorithm)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Algorithm/QuickSort.html">
+            
+                <a href="../Algorithm/QuickSort.html">
+            
+                    
+                    快速排序 (QuickSort)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Algorithm/MergeSort.html">
+            
+                <a href="../Algorithm/MergeSort.html">
+            
+                    
+                    归并排序 (MergeSort)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Algorithm/Apriori.html">
+            
+                <a href="../Algorithm/Apriori.html">
+            
+                    
+                    先验算法 (Apriori)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Algorithm/RecsysCF.html">
+            
+                <a href="../Algorithm/RecsysCF.html">
+            
+                    
+                    协同过滤 (RecsysCF)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Algorithm/Prime.html">
+            
+                <a href="../Algorithm/Prime.html">
+            
+                    
+                    素数应用 (Prime)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Architecture/">
+            
+                <a href="../Architecture/">
+            
+                    
+                    架构 (Architecture)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Architecture/Cache.html">
+            
+                <a href="../Architecture/Cache.html">
+            
+                    
+                    缓存系统 (Cache System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Architecture/Cluster.html">
+            
+                <a href="../Architecture/Cluster.html">
+            
+                    
+                    集群系统 (Cluster System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Architecture/DataModel.html">
+            
+                <a href="../Architecture/DataModel.html">
+            
+                    
+                    数据模型 (Data Model)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Architecture/Idempotent.html">
+            
+                <a href="../Architecture/Idempotent.html">
+            
+                    
+                    幂等设计 (Idempotent)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Architecture/MessageQueue.html">
+            
+                <a href="../Architecture/MessageQueue.html">
+            
+                    
+                    消息队列 (Message Queue)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Architecture/MicroService.html">
+            
+                <a href="../Architecture/MicroService.html">
+            
+                    
+                    微服务 (Micro Service)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Architecture/Migration.html">
+            
+                <a href="../Architecture/Migration.html">
+            
+                    
+                    迁移系统 (Migration System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Architecture/Monitoring.html">
+            
+                <a href="../Architecture/Monitoring.html">
+            
+                    
+                    监控系统 (Monitoring System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../Architecture/MultiTask.html">
+            
+                <a href="../Architecture/MultiTask.html">
+            
+                    
+                    多任务系统 (Multi Task)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../Architecture/Notification.html">
+            
+                <a href="../Architecture/Notification.html">
+            
+                    
+                    通知系统 (Notification System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../Architecture/ParallelConcurrence.html">
+            
+                <a href="../Architecture/ParallelConcurrence.html">
+            
+                    
+                    并行并发 (Parallel Concurrence)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../Architecture/ProcessModel.html">
+            
+                <a href="../Architecture/ProcessModel.html">
+            
+                    
+                    处理模型 (Process Model)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../Architecture/ProducerConsumer.html">
+            
+                <a href="../Architecture/ProducerConsumer.html">
+            
+                    
+                    生产消费 (Producer Consumer)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../Architecture/Quota.html">
+            
+                <a href="../Architecture/Quota.html">
+            
+                    
+                    配额系统 (Quota System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.15" data-path="../Architecture/Status.html">
+            
+                <a href="../Architecture/Status.html">
+            
+                    
+                    状态系统 (Status System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.16" data-path="../Architecture/Task.html">
+            
+                <a href="../Architecture/Task.html">
+            
+                    
+                    任务系统 (Task System)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >RabbitMQ</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="rabbitmq">RabbitMQ</h1>
+<p><a href="http://www.rabbitmq.com" target="_blank">http://www.rabbitmq.com</a></p>
+<p><a href="https://pika.readthedocs.io/en/stable/" target="_blank">https://pika.readthedocs.io/en/stable/</a></p>
+<h2 id="&#x793E;&#x533A;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;">&#x793E;&#x533A;&#x6700;&#x4F73;&#x5B9E;&#x8DF5;</h2>
+<p><a href="http://www.rabbitmq.com/best-practices.html" target="_blank">http://www.rabbitmq.com/best-practices.html</a></p>
+<h2 id="&#x67B6;&#x6784;&#x56FE;">&#x67B6;&#x6784;&#x56FE;</h2>
+<pre><code class="lang-graph">graph LR
+
+    P1((producer01)) --&gt; | message | EX1[exchange]
+    P2((producer02)) --&gt; | message | EX1[exchange]
+    P3((producer03)) --&gt; | message | EX2[exchange]
+
+    EX1[exchange] --&gt; RK1[RoutingKey01]
+    EX1[exchange] --&gt; RK2[RoutingKey02]
+    EX2[exchange] --&gt; RK3[RoutingKey03]
+
+    RK1[RoutingKey01] --&gt; Q1(Queue01)
+    RK2[RoutingKey02] --&gt; Q2(Queue02)
+    RK3[RoutingKey03] --&gt; Q3(Queue03)
+
+    Q1(Queue01) --&gt; BK1[BindingKey01]
+    Q2(Queue02) --&gt; BK2[BindingKey02]
+    Q3(Queue03) --&gt; BK2[BindingKey02]
+
+    BK1[BindingKey] --&gt; | message | C1((consumer01))
+    BK2[BindingKey] --&gt; | message | C2((consumer02))
+</code></pre>
+<h2 id="&#x9879;&#x76EE;&#x7ED3;&#x6784;">&#x9879;&#x76EE;&#x7ED3;&#x6784;</h2>
+<escape>
+<table>
+    <tr>
+        <th>Project</th>
+        <th>Exchange</th>
+        <th>Queue</th>
+        <th>Routing Key</th>
+        <th>Binding Key</th>
+    </tr>
+    <tr>
+        <td rowspan="5">&#x9879;&#x76EE;&#xFF08;&#x751F;&#x4EA7;&#x8005;&#xFF09;</td>
+    </tr>
+    <tr>
+        <td>EX</td>
+        <td></td>
+        <td>record.a.create</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>EX</td>
+        <td></td>
+        <td>record.b.create</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>EX</td>
+        <td></td>
+        <td>record.a.delete</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>EX</td>
+        <td></td>
+        <td>record.b.delete</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="3">&#x9879;&#x76EE;&#xFF08;&#x6D88;&#x8D39;&#x8005;A&#xFF09;</td>
+    </tr>
+    <tr>
+        <td>EX</td>
+        <td>QA</td>
+        <td></td>
+        <td>record.a.create</td>
+    </tr>
+    <tr>
+        <td>EX</td>
+        <td>QA</td>
+        <td></td>
+        <td>record.a.delete</td>
+    </tr>
+    <tr>
+        <td rowspan="3">&#x9879;&#x76EE;&#xFF08;&#x6D88;&#x8D39;&#x8005;B&#xFF09;</td>
+    </tr>
+    <tr>
+        <td>EX</td>
+        <td>QB</td>
+        <td></td>
+        <td>record.b.create</td>
+    </tr>
+    <tr>
+        <td>EX</td>
+        <td>QB</td>
+        <td></td>
+        <td>record.b.delete</td>
+    </tr>
+
+</table>
+</escape>
+
+
+<h2 id="producer-&#x751F;&#x4EA7;&#x8005;">Producer &#x751F;&#x4EA7;&#x8005;</h2>
+<p>Message -&gt; Exchange -- Routing Key -- Queue</p>
+<h2 id="consumer-&#x6D88;&#x8D39;&#x8005;">Consumer &#x6D88;&#x8D39;&#x8005;</h2>
+<p>Exchange -- Binding Key -- Queue -&gt; Message</p>
+<h2 id="exchange-type-&#x534F;&#x8BAE;&#x7C7B;&#x578B;">Exchange Type &#x534F;&#x8BAE;&#x7C7B;&#x578B;</h2>
+<ul>
+<li>fanout    &#x5E7F;&#x64AD;</li>
+<li>direct    &#x76F4;&#x63A5;&#x4EA4;&#x6362;&#xFF08;&#x53EF;&#x4EE5;&#x7ED1;&#x5B9A;&#x591A;&#x4E2A;&#x961F;&#x5217;, &#x751A;&#x81F3;&#x8FBE;&#x5230;&#x5E7F;&#x64AD;&#x6548;&#x679C;&#xFF09;</li>
+<li>topic     &#x4E3B;&#x9898;</li>
+<li>headers   &#x5934;&#x90E8;</li>
+</ul>
+<p>&#x58F0;&#x660E; durable &#x4E0D;&#x80FD;&#x52A8;&#x6001;&#x4ECE; true &#x53D8;&#x4E3A; false, &#x62A5;&#x9519;<code>PRECONDITION_FAILED</code>, &#x9700;&#x8981;&#x624B;&#x52A8;&#x5220;&#x9664;</p>
+<h2 id="routing-key--binding-key">Routing Key &amp; Binding Key</h2>
+<ul>
+<li>Routing Key &#x4E3A;&#x4E00;&#x4E2A;&#x53E5;&#x70B9;&#x53F7;&#x201C;.&#x201D;&#x5206;&#x9694;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x6211;&#x4EEC;&#x5C06;&#x88AB;&#x53E5;&#x70B9;&#x53F7;&#x201C;.&#x201D;&#x5206;&#x9694;&#x5F00;&#x7684;&#x6BCF;&#x4E00;&#x6BB5;&#x72EC;&#x7ACB;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;&#xFF09;</li>
+<li>Binding Key &#x4E0E; routing key &#x4E00;&#x6837;&#x4E5F;&#x662F;&#x53E5;&#x70B9;&#x53F7;&#x201C;.&#x201D;&#x5206;&#x9694;&#x7684;&#x5B57;&#x7B26;&#x4E32;</li>
+</ul>
+<p>Binding Key &#x4E2D;&#x53EF;&#x4EE5;&#x5B58;&#x5728;&#x4E24;&#x79CD;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x201C;*&#x201D;&#x4E0E;&#x201C;#&#x201D;, &#x7528;&#x4E8E;&#x505A;&#x6A21;&#x7CCA;&#x5339;&#x914D;, &#x5176;&#x4E2D;&#x201C;*&#x201D;&#x7528;&#x4E8E;&#x5339;&#x914D;&#x4E00;&#x4E2A;&#x5355;&#x8BCD;, &#x201C;#&#x201D;&#x7528;&#x4E8E;&#x5339;&#x914D;&#x591A;&#x4E2A;&#x5355;&#x8BCD;&#xFF08;&#x53EF;&#x4EE5;&#x662F;&#x96F6;&#x4E2A;&#xFF09;</p>
+<p>&#x4E00;&#x4E2A;&#x5B8C;&#x6574;&#x7684; Routing Key &#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x591A;&#x79CD;&#x5206;&#x7C7B;&#x4EA4;&#x53C9;&#x7EC4;&#x5408;&#x7684;&#x4E00;&#x79CD;</p>
+<h2 id="queue">Queue</h2>
+<ol>
+<li><p>&#x6D88;&#x8D39;&#x8005;&#x662F;&#x65E0;&#x6CD5;&#x8BA2;&#x9605;&#x6216;&#x8005;&#x83B7;&#x53D6;&#x4E0D;&#x5B58;&#x5728;&#x7684; MessageQueue &#x4E2D;&#x4FE1;&#x606F;</p>
+</li>
+<li><p>&#x6D88;&#x606F;&#x88AB; Exchange &#x63A5;&#x53D7;&#x4EE5;&#x540E;, &#x5982;&#x679C;&#x6CA1;&#x6709;&#x5339;&#x914D;&#x7684; Queue, &#x5219;&#x4F1A;&#x88AB;&#x4E22;&#x5F03;</p>
+</li>
+</ol>
+<p>&#x6700;&#x4F73;&#x5B9E;&#x8DF5;:</p>
+<pre><code>consumer &#x548C; producer &#x90FD;&#x53EF;&#x4EE5;&#x521B;&#x5EFA; Queue, &#x5982;&#x679C; consumer &#x6765;&#x521B;&#x5EFA;, &#x907F;&#x514D; consumer &#x8BA2;&#x9605;&#x4E00;&#x4E2A;&#x4E0D;&#x5B58;&#x5728;&#x7684; Queue &#x7684;&#x60C5;&#x51B5;.
+&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x8981;&#x627F;&#x62C5;&#x4E00;&#x79CD;&#x98CE;&#x9669;: &#x6D88;&#x606F;&#x5DF2;&#x7ECF;&#x6295;&#x9012;&#x4F46;&#x662F;consumer&#x5C1A;&#x672A;&#x521B;&#x5EFA;&#x961F;&#x5217;, &#x90A3;&#x4E48;&#x6D88;&#x606F;&#x5C31;&#x4F1A;&#x88AB;&#x6254;&#x5230;&#x9ED1;&#x6D1E;, &#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#x6D88;&#x606F;&#x4E22;&#x4E86;;
+&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x7684;&#x597D;&#x529E;&#x6CD5;&#x5C31;&#x662F;producer&#x548C;consumer&#x90FD;&#x5C1D;&#x8BD5;&#x521B;&#x5EFA;&#x4E00;&#x4E0B;queue.
+</code></pre><p>&#x5982;&#x679C;consumer&#x5728;&#x5DF2;&#x7ECF;&#x8BA2;&#x9605;&#x4E86;&#x53E6;&#x5916;&#x4E00;&#x4E2A;Queue&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x65E0;&#x6CD5;&#x5B8C;&#x6210;&#x65B0;Queue&#x7684;&#x521B;&#x5EFA;, &#x5FC5;&#x987B;&#x53D6;&#x6D88;&#x4E4B;&#x524D;&#x7684;&#x8BA2;&#x9605;&#x5C06;Channel&#x7F6E;&#x4E3A;&#x4F20;&#x8F93;&#x6A21;&#x5F0F;(&quot;transmit&quot;)&#x624D;&#x80FD;&#x521B;&#x5EFA;&#x65B0;&#x7684;Channel.</p>
+<h2 id="work-type-&#x5DE5;&#x4F5C;&#x7C7B;&#x578B;">Work Type &#x5DE5;&#x4F5C;&#x7C7B;&#x578B;</h2>
+<ul>
+<li>&#x8BA2;&#x9605;&#x53D1;&#x5E03;  &#x4E0D;&#x6307;&#x5B9A;&#x961F;&#x5217;&#x540D;&#x79F0;</li>
+<li>&#x751F;&#x4EA7;&#x6D88;&#x8D39;  &#x6307;&#x5B9A;&#x961F;&#x5217;&#x540D;&#x79F0;</li>
+</ul>
+<pre><code>&#x4E0D;&#x4E8B;&#x5148;&#x7ED1;&#x5B9A;&#x961F;&#x5217;, &#x6D88;&#x8D39;&#x8005;&#x5DE5;&#x4F5C;&#x65F6;, &#x7CFB;&#x7EDF;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x65B0;&#x7684;&#x4E34;&#x65F6;&#x961F;&#x5217;
+&#x6D88;&#x8D39;&#x8005;&#x6C38;&#x8FDC;&#x62FF;&#x5230;&#x7684;&#x662F;&#x6700;&#x65B0;&#x7684;&#x6D88;&#x606F;
+&#x6D88;&#x8D39;&#x8005;&#x5173;&#x95ED;&#x8FDE;&#x63A5;&#x540E;&#x5E94;&#x8BE5;&#x5220;&#x9664;&#x961F;&#x5217;
+</code></pre><h2 id="&#x6D88;&#x606F;&#x786E;&#x8BA4;--&#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;">&#x6D88;&#x606F;&#x786E;&#x8BA4; &amp; &#x6570;&#x636E;&#x6301;&#x4E45;&#x5316;</h2>
+<ul>
+<li>&#x6D88;&#x8D39;&#x786E;&#x8BA4;  &#x907F;&#x514D;&#x6D88;&#x8D39;&#x8005;&#x610F;&#x5916;&#x4E2D;&#x6B62;&#x5BFC;&#x81F4;&#x6D88;&#x606F;&#x4E22;&#x5931;</li>
+<li>&#x6570;&#x636E;&#x6301;&#x4E45;  &#x9632;&#x6B62;&#x6D88;&#x606F;&#x7CFB;&#x7EDF;&#x9000;&#x51FA;&#x6216;&#x5D29;&#x6E83;&#x65F6;&#x4E22;&#x5931;&#x961F;&#x5217;&#x548C;&#x6D88;&#x606F;</li>
+<li>&#x53D1;&#x5E03;&#x786E;&#x8BA4;  &#x9632;&#x6B62;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x9000;&#x51FA;&#x6216;&#x5D29;&#x6E83;&#x65F6;&#x4E22;&#x5931;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x6D88;&#x606F;</li>
+</ul>
+<p><strong>&#x786E;&#x8BA4;&#x79CD;&#x7C7B;</strong></p>
+<ul>
+<li><p>&#x6D88;&#x606F;&#x53D1;&#x9001;&#x786E;&#x8BA4;</p>
+<ul>
+<li>&#x662F;&#x5426;&#x5230;&#x8FBE;&#x4EA4;&#x6362;&#x5668;</li>
+<li>&#x662F;&#x5426;&#x5230;&#x8FBE;&#x961F;&#x5217;</li>
+</ul>
+</li>
+<li><p>&#x6D88;&#x8D39;&#x63A5;&#x6536;&#x786E;&#x8BA4;</p>
+</li>
+</ul>
+<p><strong>AcknowledgeMode &#x786E;&#x8BA4;&#x6A21;&#x5F0F;</strong></p>
+<ul>
+<li>NONE &#x4E0D;&#x786E;&#x8BA4;</li>
+<li>AUTO &#x81EA;&#x52A8;&#x786E;&#x8BA4;</li>
+<li>MANUAL &#x624B;&#x52A8;&#x786E;&#x8BA4;</li>
+</ul>
+<p><strong>Acknowledger</strong></p>
+<ul>
+<li>Ack</li>
+<li>Nack</li>
+<li>Reject</li>
+</ul>
+<p><strong>autoDelete</strong></p>
+<pre><code>Queue: &#x5F53;&#x6240;&#x6709;&#x6D88;&#x8D39;&#x5BA2;&#x6237;&#x7AEF;&#x8FDE;&#x63A5;&#x65AD;&#x5F00;&#x540E;&#xFF0C;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x961F;&#x5217;
+true: &#x5B95;&#x673A;&#x671F;&#x95F4;&#x7684;&#x6D88;&#x606F;&#x5219;&#x4F1A;&#x4E22;&#x5931;&#xFF08;&#x9002;&#x7528;&#x4E8E;&#x65F6;&#x6548;&#x6027;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x6BD4;&#x5982;&#x77ED;&#x4FE1;&#x9A8C;&#x8BC1;&#x7801;&#x53D1;&#x9001;&#xFF09;
+false: &#x63A5;&#x6536;&#x5305;&#x62EC;&#x5B95;&#x673A;&#x671F;&#x95F4;&#x7684;&#x6D88;&#x606F;
+
+Exchange: &#x5F53;&#x6240;&#x6709;&#x7ED1;&#x5B9A;&#x961F;&#x5217;&#x90FD;&#x4E0D;&#x5728;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x662F;&#x5426;&#x81EA;&#x52A8;&#x5220;&#x9664;&#x4EA4;&#x6362;&#x5668;
+</code></pre><p><strong>&#x6301;&#x4E45;&#x5316;&#x914D;&#x7F6E;</strong></p>
+<ul>
+<li>&#x961F;&#x5217;&#x6301;&#x4E45;&#x5316;&#xFF0C;&#x91CD;&#x542F;&#x961F;&#x5217;&#x8FD8;&#x5728;</li>
+<li>&#x6D88;&#x606F;&#x6301;&#x4E45;&#x5316;&#xFF0C;&#x91CD;&#x542F;&#x6D88;&#x606F;&#x8FD8;&#x5728;</li>
+</ul>
+<p>Queue&#x6301;&#x4E45;&#x5316;</p>
+<pre><code>durable=true        # &#x6301;&#x4E45;&#x5316;
+exclusive=false     # &#x6392;&#x4ED6;&#x6027;
+</code></pre><p>Message&#x6301;&#x4E45;&#x5316;</p>
+<pre><code>delivery_mode=2
+</code></pre><p>&#x82E5;&#x6D88;&#x606F;&#x6CA1;&#x6709;&#x6301;&#x4E45;&#x5316;&#xFF0C;RabbitMQ&#x91CD;&#x542F;&#x4E4B;&#x540E;&#xFF0C;Unacked&#x548C;Ready&#x5168;&#x90E8;&#x4E22;&#x5931;&#x3002;<br>&#x5F53;&#x6D88;&#x606F;&#x6301;&#x4E45;&#x5316;&#x540E;&#xFF0C;RabbitMQ&#x88AB;&#x91CD;&#x542F;&#x4E4B;&#x540E;&#xFF0C;Unacked&#x4F1A;&#x56DE;&#x5230;Ready&#x4E2D;&#x3002;</p>
+<h2 id="consumer-acknowledgements-and-publisher-confirms">consumer Acknowledgements and publisher confirms</h2>
+<p><a href="https://www.rabbitmq.com/confirms.html" target="_blank">https://www.rabbitmq.com/confirms.html</a></p>
+<p>consumer Acknowledgements</p>
+<table>
+<thead>
+<tr>
+<th>&#x52A8;&#x4F5C;</th>
+<th>&#x63CF;&#x8FF0;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>basic.ack</td>
+<td>&#x80AF;&#x5B9A;&#x786E;&#x8BA4;</td>
+<td>&#x6D88;&#x606F;&#x5220;&#x9664;</td>
+</tr>
+<tr>
+<td>basic.nack</td>
+<td>&#x5426;&#x5B9A;&#x786E;&#x8BA4;</td>
+<td>&#x6D88;&#x606F;&#x5220;&#x9664;/&#x91CD;&#x65B0;&#x5165;&#x961F;&#xFF08;&#x53C2;&#x6570;&#x63A7;&#x5236;&#xFF09;</td>
+</tr>
+<tr>
+<td>basic.reject</td>
+<td>&#x5426;&#x5B9A;&#x786E;&#x8BA4;</td>
+<td>&#x6D88;&#x606F;&#x5220;&#x9664;</td>
+</tr>
+</tbody>
+</table>
+<p>publisher confirms</p>
+<h2 id="channel-prefetch-setting-qos">Channel Prefetch Setting (QoS)</h2>
+<p><a href="https://www.rabbitmq.com/confirms.html#channel-qos-prefetch" target="_blank">https://www.rabbitmq.com/confirms.html#channel-qos-prefetch</a></p>
+<h2 id="&#x4EFB;&#x52A1;&#x7CFB;&#x7EDF;&#x7684;&#x51E0;&#x79CD;&#x573A;&#x666F;&#xFF08;&#x95F4;&#x9694;&#x3001;&#x5B9A;&#x65F6;&#x3001;&#x5EF6;&#x65F6;&#xFF09;">&#x4EFB;&#x52A1;&#x7CFB;&#x7EDF;&#x7684;&#x51E0;&#x79CD;&#x573A;&#x666F;&#xFF08;&#x95F4;&#x9694;&#x3001;&#x5B9A;&#x65F6;&#x3001;&#x5EF6;&#x65F6;&#xFF09;</h2>
+<p>&#x4E0B;&#x9762;&#x7ED3;&#x5408; RabbitMQ &#x6765;&#x5904;&#x7406;&#x8FD9;&#x4E9B;&#x573A;&#x666F;</p>
+<ul>
+<li><p>&#x95F4;&#x9694;</p>
+</li>
+<li><p>&#x5B9A;&#x65F6;</p>
+</li>
+<li><p>&#x5EF6;&#x65F6;</p>
+</li>
+</ul>
+<h2 id="rabbitmqctl">rabbitmqctl</h2>
+<pre><code>rabbitmqctl list_connections | wc -l
+rabbitmqctl list_channels | wc -l
+rabbitmqctl list_queues name messages_ready messages_unacknowledged
+</code></pre><h2 id="&#x5173;&#x4E8E;-conn-&#x548C;-channel">&#x5173;&#x4E8E; conn &#x548C; channel</h2>
+<ol>
+<li>&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x4E00;&#x4E2A;conn(TCP&#x8FDE;&#x63A5;)</li>
+<li>&#x591A;&#x4E2A;channel&#x5171;&#x4EAB;&#x4E00;&#x4E2A;conn&#xFF0C;&#x5B9E;&#x8DF5;&#x4E2D;&#xFF0C;channel&#x4E0E;conn&#x7684;&#x6BD4;&#x4F8B;&#x65E0;&#x9700;&#x8FC7;&#x9AD8;&#xFF0C;&#x82E5;&#x4EFB;&#x52A1;&#x8FC7;&#x591A;&#xFF0C;&#x53EF;&#x591A;&#x5F00;&#x8FDB;&#x7A0B;</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="PostgreSQL.html" class="navigation navigation-prev " aria-label="Previous page: PostgreSQL">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Redis.html" class="navigation navigation-next " aria-label="Next page: Redis">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"RabbitMQ","level":"1.3.7","depth":2,"next":{"title":"Redis","level":"1.3.8","depth":2,"path":"Components/Redis.md","ref":"Components/Redis.md","articles":[]},"previous":{"title":"PostgreSQL","level":"1.3.6","depth":2,"path":"Components/PostgreSQL.md","ref":"Components/PostgreSQL.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","-sharing","sharing-plus","todo","mermaid-full@>=0.5.1","mathjax-full@>=0.6.2","donate","flexible-alerts"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mathjax-full":{},"todo":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"/docs/images/qr_alipay.png","alipayText":"支付宝捐赠","button":"支持作者","title":"","wechat":"/docs/images/qr_wechat.png","wechatText":"微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-full":{},"highlight":{},"back-to-top-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"sharing":{"douban":true,"qq":true,"qzone":true,"weibo":true,"google":false,"facebook":false,"whatsapp":false,"all":["weibo","qzone","qq","douban","google","linkedin","twitter","facebook","whatsapp"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"空ping子","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"技术文档","language":"zh-hans","gitbook":"*"},"file":{"path":"Components/RabbitMQ.md","mtime":"2021-02-08T01:47:52.425Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-08T01:48:09.671Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-full/mermaidAPI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-full/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax-full/config.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mathjax-full/mathjax.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-donate/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-flexible-alerts/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
