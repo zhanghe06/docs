@@ -96,3 +96,22 @@ git add . && git commit -m '页面更新'
 git subtree push --prefix=_book origin gh-pages
 git checkout master
 ```
+
+## 插件
+
+gitbook插件名称 | npm插件名称 | 说明
+--- | --- | ---
+back-to-top-button | - | -
+sharing-plus | gitbook-plugin-sharing-plus | 增强分享插件
+todo | [gitbook-plugin-todo](https://github.com/ly-tools/gitbook-plugin-todo) | 添加 Todo 功能
+mermaid-full@>=0.5.1 | - | -
+mathjax-full@>=0.6.2 | [gitbook-plugin-mathjax](https://github.com/GitbookIO/plugin-mathjax) | 数学公式
+donate | [gitbook-plugin-donate](https://github.com/willin/gitbook-plugin-donate) | 打赏插件
+insert-logo | - | -
+flexible-alerts | [gitbook-plugin-flexible-alerts](https://github.com/zanfab/gitbook-plugin-flexible-alerts) | 增强提示框
+terminal | gitbook-plugin-terminal | 模拟终端
+graph | [gitbook-plugin-graph](https://github.com/cjam/gitbook-plugin-graph) | 使用 [function-plot](https://mauriciopoppe.github.io/function-plot/) 绘制数学函数图
+chart | [gitbook-plugin-chart](https://github.com/csbun/gitbook-plugin-chart) | 使用 [C3.js](https://github.com/c3js/c3) 或者 [HighCharts](https://github.com/highcharts/highcharts) 绘制图形
+mcqx | [gitbook-plugin-mcqx](https://github.com/ymcatar/gitbook-plugin-mcqx) | 选择题插件
+fbqx | [gitbook-plugin-fbqx](https://github.com/Erwin-Chan/gitbook-plugin-fbqx) | 选择题插件
+spoiler | [gitbook-plugin-spoiler](https://github.com/manchiyiu/gitbook-plugin-spoiler) | 隐藏答案
