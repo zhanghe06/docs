@@ -2,6 +2,42 @@
 
 在线文档: [https://zhanghe06.github.io/docs/](https://zhanghe06.github.io/docs/)
 
+{% chart %}
+{
+    "chart": {
+        "type": "bar"
+    },
+    "title": {
+        "text": "开发语言流行度 (Programming Language Rating)"
+    },
+    "xAxis": {
+        "title": {
+            "text": "开发语言 (Language)"
+        },
+        "categories": ["C", "Java", "Python", "C++", "C#", "JavaScript", "PHP", "Go"]
+    },
+    "yAxis": {
+        "title": {
+            "text": "流行度 (Rating)"
+        },
+        "labels": {
+            "format": "{value}%"
+        }
+    },
+    "series": [{
+        "name": "2020年",
+        "data": [15.77, 16.89, 9.71, 5.57, 5.35, 2.45, 2.40, 0.90]
+    }, {
+        "name": "2021年",
+        "data": [17.38, 11.96, 11.72, 7.56, 3.95, 2.20, 1.99, 1.41]
+    }],
+    "tooltip": {
+        "pointFormat": "{series.name}: {point.y}%"
+    }
+}
+{% endchart %}
+
+
 * [云服务 (Cloud Server)](Cloud/README.md)
     * [Aliyun](Cloud/Aliyun.md)
     * [Tencent](Cloud/Tencent.md)
@@ -47,3 +83,7 @@
     * [重放攻击 (Replay Attack)](Security/ReplayAttack.md)
     * [慢速攻击 (Slow Attack)](Security/SlowAttack.md)
     * [Sql注入 (Sql Injection)](Security/SqlInjection.md)
+* [网络 (Network)](Network/README.md)
+    * [ShadowSocks](Network/ShadowSocks.md)
+    * [Tcpdump](Network/Tcpdump.md)
+* [GitBook操作指南](GitBook.md)

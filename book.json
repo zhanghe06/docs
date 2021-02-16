@@ -10,7 +10,9 @@
         "mermaid-full@>=0.5.1",
         "mathjax-full@>=0.6.2",
         "donate",
-        "flexible-alerts"
+        "flexible-alerts",
+        "chart",
+        "terminal"
     ],
     "pluginsConfig": {
         "sharing": {
@@ -48,6 +50,14 @@
                 "icon": "fa fa-comments",
                 "className": "info"
             }
+        },
+        "chart": {
+            "type": "highcharts"
+        },
+        "terminal": {
+            "copyButtons": true,
+            "fade": true,
+            "style": "flat"
         }
     }
 }

@@ -113,5 +113,14 @@ terminal | gitbook-plugin-terminal | 模拟终端
 graph | [gitbook-plugin-graph](https://github.com/cjam/gitbook-plugin-graph) | 使用 [function-plot](https://mauriciopoppe.github.io/function-plot/) 绘制数学函数图
 chart | [gitbook-plugin-chart](https://github.com/csbun/gitbook-plugin-chart) | 使用 [C3.js](https://github.com/c3js/c3) 或者 [HighCharts](https://github.com/highcharts/highcharts) 绘制图形
 mcqx | [gitbook-plugin-mcqx](https://github.com/ymcatar/gitbook-plugin-mcqx) | 选择题插件
-fbqx | [gitbook-plugin-fbqx](https://github.com/Erwin-Chan/gitbook-plugin-fbqx) | 选择题插件
+fbqx | [gitbook-plugin-fbqx](https://github.com/Erwin-Chan/gitbook-plugin-fbqx) | 填空题插件
 spoiler | [gitbook-plugin-spoiler](https://github.com/manchiyiu/gitbook-plugin-spoiler) | 隐藏答案
+
+
+`chart`插件使用`HighCharts`生成的图表右下角会默认显示页脚`Highcharts.com`
+
+> [!COMMENT|label:去除图表页脚]
+> - 找到文件`node_modules/gitbook-plugin-chart/assets/highcharts/highcharts.js`<br>
+> - 搜索到`credits`将其属性`enabled:!0`修改为`enabled:0`
+
+不太厚道, 请勿模仿

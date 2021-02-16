@@ -224,7 +224,7 @@ return True
 ```
 一切正常, 没有超卖, 会阻塞其它事务, 性能较差
 
-需要注意的是`for update`要放到`mysql`的事务中，即`begin`和`commit`中，否者不起作用。
+需要注意的是`for update`要放到`mysql`的事务中，即`begin`和`commit`之间，否者不起作用。
 
 3. 乐观锁
 
