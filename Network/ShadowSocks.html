@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Tencent · 技术文档</title>
+        <title>ShadowSocks · 技术文档</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -78,10 +78,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Vultr.html" />
+    <link rel="next" href="Tcpdump.html" />
     
     
-    <link rel="prev" href="Aliyun.html" />
+    <link rel="prev" href="./" />
     
 
     
@@ -127,9 +127,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="../Cloud/">
             
-                <a href="./">
+                <a href="../Cloud/">
             
                     
                     云服务 (Cloud Server)
@@ -141,9 +141,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.1" data-path="Aliyun.html">
+        <li class="chapter " data-level="1.2.1" data-path="../Cloud/Aliyun.html">
             
-                <a href="Aliyun.html">
+                <a href="../Cloud/Aliyun.html">
             
                     
                     Aliyun
@@ -154,9 +154,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.2" data-path="Tencent.html">
+        <li class="chapter " data-level="1.2.2" data-path="../Cloud/Tencent.html">
             
-                <a href="Tencent.html">
+                <a href="../Cloud/Tencent.html">
             
                     
                     Tencent
@@ -167,9 +167,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.3" data-path="Vultr.html">
+        <li class="chapter " data-level="1.2.3" data-path="../Cloud/Vultr.html">
             
-                <a href="Vultr.html">
+                <a href="../Cloud/Vultr.html">
             
                     
                     Vultr
@@ -742,9 +742,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="../Network/">
+        <li class="chapter " data-level="1.7" data-path="./">
             
-                <a href="../Network/">
+                <a href="./">
             
                     
                     网络 (Network)
@@ -756,9 +756,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="../Network/ShadowSocks.html">
+        <li class="chapter active" data-level="1.7.1" data-path="ShadowSocks.html">
             
-                <a href="../Network/ShadowSocks.html">
+                <a href="ShadowSocks.html">
             
                     
                     ShadowSocks
@@ -769,9 +769,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../Network/Tcpdump.html">
+        <li class="chapter " data-level="1.7.2" data-path="Tcpdump.html">
             
-                <a href="../Network/Tcpdump.html">
+                <a href="Tcpdump.html">
             
                     
                     Tcpdump
@@ -830,7 +830,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Tencent</a>
+        <a href=".." >ShadowSocks</a>
     </h1>
 </div>
 
@@ -845,30 +845,60 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="tencent">Tencent</h1>
-<p><strong>&#x5B98;&#x7F51;</strong></p>
-<p><a href="https://cloud.tencent.com" target="_blank">https://cloud.tencent.com</a></p>
-<p><strong>&#x4E91;&#x76FE;</strong></p>
-<blockquote>
-<p>[!NOTE|label:&#x5173;&#x95ED;&#x7406;&#x7531;]
-&#x6570;&#x636E;&#x8BF4;&#x8BDD;&#xFF0C;&#x5360;&#x7528;&#x989D;&#x5916;&#x8D44;&#x6E90;</p>
-</blockquote>
+                                <h1 id="shadowsocks">ShadowSocks</h1>
+<p><a href="https://github.com/shadowsocks/shadowsocks" target="_blank">https://github.com/shadowsocks/shadowsocks</a></p>
+<h2 id="vultr-centos-7-&#x5B89;&#x88C5;-shadowsocks-&#x65B9;&#x6848;"><a href="https://www.vultr.com/?ref=7428701" target="_blank">Vultr</a> CentOS 7 &#x5B89;&#x88C5; ShadowSocks &#x65B9;&#x6848;</h2>
+<p>&#x6CE8;&#x518C;&#x5730;&#x5740;: <a href="https://www.vultr.com/?ref=7428701" target="_blank">https://www.vultr.com</a></p>
+<p>&#x6CE8;&#x518C;&#x8D26;&#x53F7;, &#x5F00;&#x901A;&#x4E91;&#x4E3B;&#x673A;, &#x767B;&#x5F55;&#x4E3B;&#x673A;</p>
 <pre><code>**[terminal]
-  PID USER      PR  NI    VIRT    RES    SHR S %CPU %MEM     TIME+ COMMAND
-13946 root      20   0 1009216  69912   4152 S  0.7  3.7 113:10.82 YDService
-</code></pre><p>&#x5173;&#x95ED;&#x4E91;&#x76FE;</p>
-<p>1&#x3001;&#x63A7;&#x5236;&#x53F0;&#x65B9;&#x5F0F;</p>
-<blockquote>
-<p>[!TIP|labelVisibility:hidden|iconVisibility:hidden]
-&#x5728; <a href="https://console.cloud.tencent.com/cwp/asset/machine" target="_blank">&#x4E3B;&#x673A;&#x5B89;&#x5168;&#xFF08;&#x4E91;&#x955C;&#xFF09;-&#x8D44;&#x4EA7;&#x7BA1;&#x7406;-&#x4E3B;&#x673A;&#x5217;&#x8868;</a> &#x91CC;&#x627E;&#x5230;&#x81EA;&#x5DF1;&#x7684;&#x673A;&#x5668;&#xFF0C;&#x70B9;&#x51FB;&#x5378;&#x8F7D;&#x5373;&#x53EF;&#x3002;<br>
-&#x7EA6;1&#x5206;&#x949F;&#x540C;&#x6B65;&#x72B6;&#x6001;&#xFF0C;&#x5B9E;&#x6D4B;&#x6CA1;&#x6709;&#x5378;&#x8F7D;&#x6210;&#x529F;&#xFF0C;&#x8FD9;&#x5C31;&#x6709;&#x70B9;&#x626F;&#x4E86;&#x3002;</p>
-</blockquote>
-<p>2&#x3001;&#x7EC8;&#x7AEF;&#x65B9;&#x5F0F;</p>
-<blockquote>
-<p>[!TIP|labelVisibility:hidden|iconVisibility:hidden]</p>
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command ssh root@my_server_ip]
+</code></pre><p><strong>&#x5E38;&#x7528;&#x5DE5;&#x5177;&#x5B89;&#x88C5;</strong></p>
 <pre><code>**[terminal]
-**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command /usr/local/qcloud/YunJing/uninst.sh]
-</code></pre></blockquote>
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command yum install -y python-pip net-tools vim-enhanced git]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command pip install -U pip]
+</code></pre><p><strong>shadowsocks&#x5B89;&#x88C5;</strong></p>
+<pre><code>**[terminal]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command pip install git+https://github.com/shadowsocks/shadowsocks.git@master]
+</code></pre><p><strong>&#x670D;&#x52A1;&#x914D;&#x7F6E;</strong></p>
+<pre><code class="lang-bash">cat &lt;&lt; EOF &gt; /etc/shadowsocks.json
+{
+    <span class="hljs-string">&quot;server&quot;</span>:<span class="hljs-string">&quot;my_server_ip&quot;</span>,
+    <span class="hljs-string">&quot;server_port&quot;</span>:8282,
+    <span class="hljs-string">&quot;local_address&quot;</span>: <span class="hljs-string">&quot;127.0.0.1&quot;</span>,
+    <span class="hljs-string">&quot;local_port&quot;</span>:1080,
+    <span class="hljs-string">&quot;password&quot;</span>:<span class="hljs-string">&quot;mypassword&quot;</span>,
+    <span class="hljs-string">&quot;timeout&quot;</span>:300,
+    <span class="hljs-string">&quot;method&quot;</span>:<span class="hljs-string">&quot;aes-256-cfb&quot;</span>,
+    <span class="hljs-string">&quot;fast_open&quot;</span>: <span class="hljs-literal">true</span>
+}
+EOF
+</code></pre>
+<p><strong>&#x670D;&#x52A1;&#x7BA1;&#x7406;</strong></p>
+<pre><code>**[terminal]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command ssserver -c /etc/shadowsocks.json --user nobody -d start]**[prompt     # &#x542F;&#x52A8;]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command ssserver -c /etc/shadowsocks.json --user nobody -d stop]**[prompt      # &#x5173;&#x95ED;]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command less /var/log/shadowsocks.log]**[prompt                                # &#x65E5;&#x5FD7;]
+</code></pre><p><strong>&#x4FEE;&#x6539;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;</strong></p>
+<p>&#x65B9;&#x5F0F;&#x4E00;</p>
+<p>vultr &#x9ED8;&#x8BA4;&#x662F;&#x901A;&#x8FC7;&#x7CFB;&#x7EDF;&#x52A8;&#x6001;&#x9632;&#x706B;&#x5899;firewalld&#x63A7;&#x5236;&#x89C4;&#x5219;&#x7684;</p>
+<p>&#x6DFB;&#x52A0;&#x89C4;&#x5219;</p>
+<pre><code>**[terminal]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command firewall-cmd --zone=public --add-port=8282/tcp --permanent]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command firewall-cmd --reload]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command firewall-cmd --list-ports]
+8282/tcp 3128/tcp
+</code></pre><p>&#x5220;&#x9664;&#x89C4;&#x5219;</p>
+<pre><code>**[terminal]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command firewall-cmd --zone=public --remove-port=3128/tcp --permanent]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command firewall-cmd --reload]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command firewall-cmd --list-ports]
+</code></pre><p>&#x65B9;&#x5F0F;&#x4E8C;</p>
+<p>&#x4E5F;&#x53EF;&#x4EE5;&#x5148;&#x5173;&#x95ED;&#x7CFB;&#x7EDF;&#x52A8;&#x6001;&#x9632;&#x706B;&#x5899;firewalld</p>
+<pre><code>**[terminal]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command systemctl stop firewalld]**[prompt                                  # &#x5173;&#x7CFB;&#x7EDF;&#x9632;&#x706B;&#x5899;]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command systemctl disable firewalld]**[prompt                               # &#x53D6;&#x6D88;&#x5F00;&#x673A;&#x542F;&#x52A8;]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command systemctl status firewalld]**[prompt                                # &#x67E5;&#x770B;&#x5173;&#x95ED;&#x72B6;&#x6001;]
+</code></pre><p>&#x7136;&#x540E;&#x901A;&#x8FC7;web&#x7BA1;&#x7406;&#x754C;&#x9762;&#x6DFB;&#x52A0;&#x9632;&#x706B;&#x5899;&#x89C4;&#x5219;&#xFF0C;&#x5E76;&#x5C06;&#x89C4;&#x5219;&#x94FE;&#x63A5;&#x5230;&#x5B9E;&#x4F8B;</p>
 
                                 
                                 </section>
@@ -896,12 +926,12 @@
 
             
                 
-                <a href="Aliyun.html" class="navigation navigation-prev " aria-label="Previous page: Aliyun">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 网络 (Network)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Vultr.html" class="navigation navigation-next " aria-label="Next page: Vultr">
+                <a href="Tcpdump.html" class="navigation navigation-next " aria-label="Next page: Tcpdump">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -912,7 +942,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Tencent","level":"1.2.2","depth":2,"next":{"title":"Vultr","level":"1.2.3","depth":2,"path":"Cloud/Vultr.md","ref":"Cloud/Vultr.md","articles":[]},"previous":{"title":"Aliyun","level":"1.2.1","depth":2,"path":"Cloud/Aliyun.md","ref":"Cloud/Aliyun.md","articles":[]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","-sharing","sharing-plus","todo","mermaid-full@>=0.5.1","mathjax-full@>=0.6.2","donate","flexible-alerts","chart","terminal"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mathjax-full":{},"todo":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"/docs/images/qr_alipay.png","alipayText":"支付宝捐赠","button":"支持作者","title":"","wechat":"/docs/images/qr_wechat.png","wechatText":"微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-full":{},"highlight":{},"back-to-top-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"sharing":{"douban":true,"qq":true,"qzone":true,"weibo":true,"google":false,"facebook":false,"whatsapp":false,"all":["weibo","qzone","qq","douban","google","linkedin","twitter","facebook","whatsapp"]},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"highcharts"}},"theme":"default","author":"空ping子","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"技术文档","language":"zh-hans","gitbook":"*"},"file":{"path":"Cloud/Tencent.md","mtime":"2021-02-16T14:00:34.722Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-16T14:00:45.867Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ShadowSocks","level":"1.7.1","depth":2,"next":{"title":"Tcpdump","level":"1.7.2","depth":2,"path":"Network/Tcpdump.md","ref":"Network/Tcpdump.md","articles":[]},"previous":{"title":"网络 (Network)","level":"1.7","depth":1,"path":"Network/README.md","ref":"Network/README.md","articles":[{"title":"ShadowSocks","level":"1.7.1","depth":2,"path":"Network/ShadowSocks.md","ref":"Network/ShadowSocks.md","articles":[]},{"title":"Tcpdump","level":"1.7.2","depth":2,"path":"Network/Tcpdump.md","ref":"Network/Tcpdump.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["back-to-top-button","-sharing","sharing-plus","todo","mermaid-full@>=0.5.1","mathjax-full@>=0.6.2","donate","flexible-alerts","chart","terminal"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"mathjax-full":{},"todo":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"donate":{"alipay":"/docs/images/qr_alipay.png","alipayText":"支付宝捐赠","button":"支持作者","title":"","wechat":"/docs/images/qr_wechat.png","wechatText":"微信捐赠"},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-full":{},"highlight":{},"back-to-top-button":{},"flexible-alerts":{"danger":{"className":"danger","icon":"fa fa-ban","label":"Attention"},"note":{"className":"info","icon":"fa fa-info-circle","label":"Note"},"style":"callout","tip":{"className":"tip","icon":"fa fa-lightbulb-o","label":"Tip"},"warning":{"className":"warning","icon":"fa fa-exclamation-triangle","label":"Warning"},"comment":{"label":"Comment","icon":"fa fa-comments","className":"info"}},"sharing":{"douban":true,"qq":true,"qzone":true,"weibo":true,"google":false,"facebook":false,"whatsapp":false,"all":["weibo","qzone","qq","douban","google","linkedin","twitter","facebook","whatsapp"]},"terminal":{"copyButtons":true,"fade":true,"style":"flat"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"chart":{"type":"highcharts"}},"theme":"default","author":"空ping子","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"技术文档","language":"zh-hans","gitbook":"*"},"file":{"path":"Network/ShadowSocks.md","mtime":"2021-02-16T14:00:34.724Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-02-16T14:00:45.867Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
