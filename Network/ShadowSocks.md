@@ -16,9 +16,13 @@
 **常用工具安装**
 ```
 **[terminal]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command yum install -y epel-release]
 **[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command yum install -y python-pip net-tools vim-enhanced git]
-**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command pip install -U pip]
+**[prompt root@node]**[delimiter :]**[path ~]**[delimiter # ]**[command pip install -U "pip < 21.0"]
 ```
+
+> [!WARNING|label:版本支持]
+> pip 21.0已于2021年1月停止对Python 2.7的支持
 
 **shadowsocks安装**
 ```
