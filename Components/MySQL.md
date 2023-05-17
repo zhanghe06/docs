@@ -1,5 +1,21 @@
 # MySQL
 
+
+Uber宣布从Postgres切换到MySQL?
+
+
+## 基础
+
+操作 | 命令
+--- | ---
+查看表结构的详细信息 | DESC 表名;
+修改表名 | ALTER TABLE 表名 RENAME TO 新的表名;
+添加新列 | ALTER TABLE 表名 ADD COLUMN 列名 结构描述 \[AFTER 指定插入位置列名\];
+删除旧列 | ALTER TABLE 表名 DROP COLUMN 列名;
+修改列名 | ALTER TABLE 表名 CHANGE 旧列名 新列名 结构描述;
+改列属性 | ALTER TABLE 表名 MODIFY 列名 新的结构描述;
+
+
 ## 常用操作
 ```
 # 登陆 MySQL:
@@ -23,6 +39,21 @@ delete from mysql.user where user='admin' and host='localhost';
 grant select,insert,update,delete on *.* to www@"%" Identified by "abc";
 # 刷新,使所做的改动生效
 flush privileges;
+```
+
+mysql赋权操作：
+```
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '123456' WITH GRANT OPTION;
+
+flush privileges;
+GRANT：赋权命令
+ALL PRIVILEGES：当前用户的所有权限
+ON：介词
+*.*：当前用户对所有数据库和表的相应操作权限
+TO：介词
+‘root’@’%’：权限赋给root用户，所有ip都能连接
+IDENTIFIED BY ‘123456’：连接时输入密码，密码为123456
+WITH GRANT OPTION：允许级联赋权
 ```
 
 备份 mysqldump
@@ -155,4 +186,60 @@ select DATE_FORMAT(create_time,'%Y%m') months,count(caseid) count from tc_case g
 SELECT round((sum(DATA_LENGTH)+sum(INDEX_LENGTH))/1024/1024, 2) AS data FROM information_schema.TABLES where TABLE_SCHEMA='scrapy_news';
 
 select concat(round(sum(DATA_LENGTH/1024/1024),2), 'MB') as data from information_schema.TABLES;
+```
+
+## 分支
+
+- Percona Server
+- MariaDB
+
+## 与 PostgreSQL 对比
+
+参考: https://database.51cto.com/art/202007/620924.htm
+
+**开源协议**
+1. PostgreSQL 基于自由的 BSD/MIT 许可，组织可以使用、复制、修改和重新分发代码，只需要提供一个版权声明即可。
+2. MySQL 的开源协议是基于 GPL 协议，任何公司都可以免费使用，不允许修改后和衍生的代码做为闭源的商业软件发布和销售，MySQL 的版权在甲骨文手中，甲骨文可以推了其商业闭源版本。
+
+**ACID 支持方面**
+1. PostgreSQL 支持事务的强一致性，事务保证性好，完全支持 ACID 特性。
+2. MySQL 只有 innodb 引擎支持事务，事务一致性保证上可根据实际需求调整，为了最大限度的保护数据，MySQL 可配置双一模式，对 ACID 的支持上比 PG 稍弱弱。
+
+**SQL 标准的支持方面**
+1. PostgreSQL 几乎支持所有的 SQL 标准，支持类型相当丰富。
+2. MySQL 只支持部分 SQL 标准，相比于 PG 支持类型稍弱。
+
+**复制**
+1. PostgreSQL 可以做到同步，异步，半同步复制，以及基于日志逻辑复制，可以实现表级别的订阅和发布。
+2. MySQL 的复制是基于 binlog 的逻辑异步复制，无法实现同步复制。
+
+**并发控制**
+1. PostgreSQL 通过其 MVCC 实现有效地解决了并发问题，从而实现了非常高的并发性。
+2. MySQL 仅在 InnoDB 中支持 MVCC。InnoDB 的基于回滚段实现的 MVCC 机制，但是 MySQL 的间隙锁影响较大，锁定数据较多。
+
+**性能**
+PostgreSQL
+
+**高可用技术的实现**
+1. PostgreSQL
+2. MySQL
+
+
+## LOAD CSV (大数据量导入方案)
+
+[LOAD DATA Statement](https://dev.mysql.com/doc/refman/8.0/en/load-data.html)
+
+```
+load data
+    local -- 从客户端加载文件
+    infile 'xxx/suppliers.csv'
+    ignore -- 与唯一键重复的行将被忽略，默认指定 ignore，（可选项：replace 和 ignore）
+    into table supplier
+    character set utf8 -- 可选，避免中文乱码问题
+    fields terminated by ',' -- 字段分隔符，每个字段(列)以什么字符分隔，默认是 \t
+        optionally enclosed by '"' -- 文本限定符，每个字段被什么字符包围，默认是空字符
+        escaped by '"' -- 转义符，默认是 \
+lines terminated by '\n' -- 记录分隔符，如字段本身也含\n，那么应先去除，否则load data 会误将其视作另一行记录进行导入
+ignore 1 lines -- 忽略首行表头
+(supplier_name, category_level_1, category_level_2); -- 每一行文本按顺序对应的表字段，建议不要省略
 ```

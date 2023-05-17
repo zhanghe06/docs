@@ -2,46 +2,10 @@
 
 在线文档: [https://zhanghe06.github.io/docs/](https://zhanghe06.github.io/docs/)
 
-{% chart %}
-{
-    "chart": {
-        "type": "bar"
-    },
-    "title": {
-        "text": "开发语言流行度 (Programming Language Rating)"
-    },
-    "xAxis": {
-        "title": {
-            "text": "开发语言 (Language)"
-        },
-        "categories": ["C", "Java", "Python", "C++", "C#", "JavaScript", "PHP", "Go"]
-    },
-    "yAxis": {
-        "title": {
-            "text": "流行度 (Rating)"
-        },
-        "labels": {
-            "format": "{value}%"
-        }
-    },
-    "series": [{
-        "name": "2020年",
-        "data": [15.77, 16.89, 9.71, 5.57, 5.35, 2.45, 2.40, 0.90]
-    }, {
-        "name": "2021年",
-        "data": [17.38, 11.96, 11.72, 7.56, 3.95, 2.20, 1.99, 1.41]
-    }],
-    "tooltip": {
-        "pointFormat": "{series.name}: {point.y}%"
-    }
-}
-{% endchart %}
-
-
-* [云服务 (Cloud Server)](Cloud/README.md)
-    * [Aliyun](Cloud/Aliyun.md)
-    * [Tencent](Cloud/Tencent.md)
-    * [Vultr](Cloud/Vultr.md)
+* [云计算 (Cloud Computing)](CloudComputing/README.md)
+    * [Aliyun](CloudComputing/Aliyun.md)
+    * [Tencent](CloudComputing/Tencent.md)
+    * [Vultr](CloudComputing/Vultr.md)
 * [组件 (Components)](Components/README.md)
     * [Keepalived](Components/Keepalived.md)
     * [MariaDB](Components/MariaDB.md)
@@ -89,8 +53,10 @@
 * [前端 (FrontEnd)](FrontEnd/README.md)
     * [色彩 (Color)](FrontEnd/Color.md)
     * [层叠样式 (CSS)](FrontEnd/CSS.md)
+    * [图片格式 (Picture Format)](FrontEnd/PictureFormat.md)
 * [深度学习 (Deep Learning)](DeepLearning/README.md)
     * [语音识别 (ASR)](DeepLearning/ASR.md)
     * [语音合成 (TTS)](DeepLearning/TTS.md)
     * [文本识别 (OCR)](DeepLearning/OCR.md)
+* [数据结构 (Data Structure)](DataStructure/README.md)
 * [GitBook操作指南](GitBook.md)

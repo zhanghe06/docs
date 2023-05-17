@@ -124,3 +124,156 @@ spoiler | [gitbook-plugin-spoiler](https://github.com/manchiyiu/gitbook-plugin-s
 > - 搜索到`credits`将其属性`enabled:!0`修改为`enabled:0`
 
 不太厚道, 请勿模仿
+
+## MathJax
+
+基础语法
+
+名称 | 表达式 | 说明
+--- | --- | ---
+显示公式 | `\\(...\\)` | 行内显示 (inline mode)
+显示公式 | `\\[...\\]` | 单行显示 (display mode)
+希腊字母 | `\alpha, \beta, \gamma, \delta, …, \omega, \pi` | \\( \alpha, \beta, \gamma, \delta, \lambda, \omega, \sigma, …, \pi \\)
+希腊字母 | `\Alpha, \Beta, \Gamma, \Delta, …, \Omega, \Pi` | \\( \Gamma, \Delta, \Lambda, \Omega, \Sigma, …, \Pi \\)
+上下标 | `2^x, \log_2x, 10^x, \log{_1}{_0}x, x^{10}` | \\( 2^x, \log_2x, 10^x, \log{_1}{_0}x, x^{10} \\)
+括号 | `\left(\frac{\sqrt x}{y^3}\right)` | \\( \left(\frac{\sqrt x}{y^3}\right) \\)
+分数 | `\frac {a+1} {b+1}, {a+1 \over b+1}` | \\( \frac {a+1} {b+1}, {a+1 \over b+1} \\)
+根号 | `\sqrt {x^3}, \sqrt[3] {\frac x y}` | \\( \sqrt {x^3}, \sqrt[3] {\frac x y} \\)
+三角函数 | `1 = \cos^2 \theta + \sin^2 \theta` | \\( 1 = \cos^2 \theta + \sin^2 \theta \\)
+对数 | `\log_2x, \log{_1}{_0}x` | \\( \log_2x, \log{_1}{_0}x \\) $$\log_{10}x$$
+箭头 | `\rightarrow \leftarrow \Rightarrow \Leftarrow` | \\( \rightarrow \leftarrow \Rightarrow \Leftarrow \\)
+省略号 | `a_1, a_2, \ldots ,a_n` | \\( a_1, a_2, \ldots ,a_n \\)
+向量 | `\overrightarrow {xy}` | \\( \overrightarrow {xy} \\)
+运算符号 | `\times \div \pm \mp 点乘: x \cdot y` | \\( \times \div \pm \mp 点乘: x \cdot y \\)
+积分 | `\int_{a}^{b}f(x)dx` | \\( \int_{a}^{b}f(x)dx \\)
+空和 | `\sum_{i=1}^{n}` | \\( \sum_{i=1}^{n} \\)
+空积 | `\prod_{i=a}^{b}f(i)` | \\( \prod_{i=a}^{b}f(i) \\)
+极限 | `\lim_{x\to+\infty}f(x)` | \\( \displaystyle{\lim_{x\to+\infty}f(x)} \\)
+
+## KaTeX
+
+公式
+
+```
+{% math %}
+X_n = X_{n-2} + X_{n-1} + (n-1)
+{% endmath %}
+```
+
+{% math %}
+X_n = X_{n-2} + X_{n-1} + (n-1)
+{% endmath %}
+
+等式对齐
+
+```
+{% math %}
+\begin{aligned}
+  A &= B + C \\
+    &= C + D + C \\
+    &= 2C + D
+\end{aligned}
+{% endmath %}
+```
+
+{% math %}
+\begin{aligned}
+  A &= B + C \\
+    &= C + D + C \\
+    &= 2C + D
+\end{aligned}
+{% endmath %}
+
+矩阵
+
+```
+{% math %}
+\begin{bmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{bmatrix}
+{% endmath %}
+```
+
+{% math %}
+\begin{bmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{bmatrix}
+{% endmath %}
+
+## HighCharts
+
+柱状图
+
+```
+{% chart %}
+{
+    "chart": {
+        "type": "bar"
+    },
+    "title": {
+        "text": "开发语言流行度 (Programming Language Rating)"
+    },
+    "xAxis": {
+        "title": {
+            "text": "开发语言 (Language)"
+        },
+        "categories": ["C", "Java", "Python", "C++", "C#", "JavaScript", "PHP", "Go"]
+    },
+    "yAxis": {
+        "title": {
+            "text": "流行度 (Rating)"
+        },
+        "labels": {
+            "format": "{value}%"
+        }
+    },
+    "series": [{
+        "name": "2020年",
+        "data": [15.77, 16.89, 9.71, 5.57, 5.35, 2.45, 2.40, 0.90]
+    }, {
+        "name": "2021年",
+        "data": [17.38, 11.96, 11.72, 7.56, 3.95, 2.20, 1.99, 1.41]
+    }],
+    "tooltip": {
+        "pointFormat": "{series.name}: {point.y}%"
+    }
+}
+{% endchart %}
+```
+
+{% chart %}
+{
+    "chart": {
+        "type": "bar"
+    },
+    "title": {
+        "text": "开发语言流行度 (Programming Language Rating)"
+    },
+    "xAxis": {
+        "title": {
+            "text": "开发语言 (Language)"
+        },
+        "categories": ["C", "Java", "Python", "C++", "C#", "JavaScript", "PHP", "Go"]
+    },
+    "yAxis": {
+        "title": {
+            "text": "流行度 (Rating)"
+        },
+        "labels": {
+            "format": "{value}%"
+        }
+    },
+    "series": [{
+        "name": "2020年",
+        "data": [15.77, 16.89, 9.71, 5.57, 5.35, 2.45, 2.40, 0.90]
+    }, {
+        "name": "2021年",
+        "data": [17.38, 11.96, 11.72, 7.56, 3.95, 2.20, 1.99, 1.41]
+    }],
+    "tooltip": {
+        "pointFormat": "{series.name}: {point.y}%"
+    }
+}
+{% endchart %}

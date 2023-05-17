@@ -1,4 +1,4 @@
-# 云服务 (Cloud Server)
+# 云计算 (Cloud Computing)
 
 * [Aliyun](Aliyun.md)
 * [Tencent](Tencent.md)

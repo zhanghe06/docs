@@ -9,6 +9,7 @@
         "todo",
         "mermaid-full@>=0.5.1",
         "mathjax-full@>=0.6.2",
+        "katex",
         "donate",
         "flexible-alerts",
         "chart",

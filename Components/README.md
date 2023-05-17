@@ -1,6 +1,5 @@
 # 组件 (Components)
 
-* [Keepalived](Keepalived.md)
 * [MariaDB](MariaDB.md)
 * [MongoDB](MongoDB.md)
 * [MSSqlServer](MSSqlServer.md)

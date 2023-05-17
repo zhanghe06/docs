@@ -1,5 +1,52 @@
 # Redis
 
+Redis 4.0 发生的最大变化
+1. 加入了模块系统, 可以参考[Redis Labs 开发的模块](http://redismodules.com)
+2. 新增了Memeory命令
+3. ...
+
+## 数据结构
+
+- [String 字符串](https://www.runoob.com/redis/redis-strings.html)
+  + 数据结构: 简单动态字符串（simple dynamic string,SDS）
+  + 常用操作: get、set、del、incr、decr 等
+  + 应用场景: 缓存、计数器、session
+- [Hash 哈希](https://www.runoob.com/redis/redis-hashes.html)
+  + 数据结构: 压缩列表（ziplist）；哈希表（hashtable）
+  + 常用操作: hget、hset、hdel 等
+  + 应用场景: 购物车、配置信息
+- [List 列表](https://www.runoob.com/redis/redis-lists.html)
+  + 数据结构: 压缩列表（ziplist）；双向链表（LinkedList）
+  + 常用操作:
+    + lpush+lpop=Stack（栈）
+    + lpush+rpop=Queue（队列）
+    + lpush+ltrim=Capped Collection（有限集合）
+    + lpush+brpop=Message Queue（消息队列）
+  + 应用场景: 时间轴
+- [Set 集合](https://www.runoob.com/redis/redis-sets.html)
+  + 数据结构: 整数集合（inset）；哈希表（hashtable）
+  + 常用操作: sset、srem、scard、smembers、sismember
+  + 应用场景: 标签、点赞、收藏
+- [Sorted Set 有序集合](https://www.runoob.com/redis/redis-sorted-sets.html)
+  + 数据结构: 压缩列表（ziplist）；跳跃表（skiplist）
+  + 常用操作: zadd、zrange、zscore
+  + 应用场景: 排行榜
+
+[发布订阅](https://www.runoob.com/redis/redis-pub-sub.html) 消息通信模式
+
+
+## 为什么快
+
+- 完全基于内存
+
+Redis是纯内存数据库，相对于读写磁盘，读写内存的速度就不是几倍几十倍了，一般，hash查找可以达到每秒百万次的数量级。
+
+- 多路复用IO
+
+"多路"指的是多个网络连接，"复用"指的是复用同一个线程。
+采用多路 I/O 复用技术可以让单个线程高效的处理多个连接请求（尽量减少网络IO的时间消耗）。
+可以直接理解为：单线程的原子操作，避免上下文切换的时间和性能消耗；加上对内存中数据的处理速度，很自然的提高redis的吞吐量。
+
 ## 极端业务场景
 
 - 新闻应用中的热点新闻内容；

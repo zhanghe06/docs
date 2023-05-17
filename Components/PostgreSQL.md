@@ -364,13 +364,51 @@ select pg_sleep(1);
 
 ## csv 导入导出
 
-https://www.postgresql.org/docs/current/static/sql-copy.html
+[COPY](https://www.postgresql.org/docs/current/static/sql-copy.html)
 
 ```
 # 导入
 COPY table_name FROM 'filename';
 
+\copy tbl_a from '/root/document/csv/table_aaa.csv' with csv header delimiter ',' encoding 'UTF8';
+
+
 # 导出
 COPY table_name TO 'filename';
 COPY ( SELECT * FROM table_name ) TO 'filename';
 ```
+
+## 执行分析计划
+
+postgres 打开计时
+```
+table_name=# \timing
+```
+
+注意：`EXPLAIN ANALYZE` 与 `EXPLAIN` 不同；`EXPLAIN`有查询缓存，不便于分析时间，应采用`EXPLAIN ANALYZE`
+
+背景：总数据量200W，03-10之后的数据100W，04-10之后的数据2W，datestamp字段已加索引
+```
+terminal_db=> EXPLAIN ANALYZE select * from insight where datestamp > '2022-04-10';
+                                                                   QUERY PLAN
+------------------------------------------------------------------------------------------------------------------------------------------------
+ Index Scan using insight_datestamp_263e9ea0 on insight  (cost=0.43..2271.81 rows=9754 width=527) (actual time=0.016..8.632 rows=19315 loops=1)
+   Index Cond: (datestamp > '2022-04-10 00:00:00+00'::timestamp with time zone)
+ Planning Time: 0.096 ms
+ Execution Time: 9.387 ms
+(4 rows)
+
+Time: 10.090 ms
+terminal_db=> EXPLAIN ANALYZE select * from insight where datestamp > '2022-03-10';
+                                                      QUERY PLAN
+-----------------------------------------------------------------------------------------------------------------------
+ Seq Scan on insight  (cost=0.00..182403.80 rows=1342509 width=527) (actual time=0.543..6646.885 rows=1354431 loops=1)
+   Filter: (datestamp > '2022-03-10 00:00:00+00'::timestamp with time zone)
+   Rows Removed by Filter: 842033
+ Planning Time: 0.076 ms
+ Execution Time: 6707.264 ms
+(5 rows)
+
+Time: 6707.835 ms (00:06.708)
+```
+以上可以分析出：如果数据量区分度不高，即使有索引，查询也会耗时，不走索引，查询量少的情况下，命中索引
