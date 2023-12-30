@@ -50,3 +50,20 @@ NAS 套件（RockPi4C主板*1、外壳*1、扩展卡*1、eMMC*1） + WD2.5寸1T�
 阿里云带宽上行和下行当超过10M带宽时是对等的，以10M为分割点，规则如下：
 1. 当出网带宽小于10 Mbit/s时，入网带宽最大为10 Mbit/s。
 2. 当出网带宽大于10 Mbit/s时，入网带宽与您购买的出网带宽一致。
+
+## OSS
+
+- [使用STS临时访问凭证访问OSS](https://help.aliyun.com/zh/oss/developer-reference/use-temporary-access-credentials-provided-by-sts-to-access-oss)
+- [对象存储 OSS](https://help.aliyun.com/zh/oss/)
+- [图片处理](https://help.aliyun.com/zh/oss/user-guide/latest-version-of-img-guide/)
+
+参数处理
+```
+# 图片定宽
+?x-oss-process=image/resize,w_540,m_lfit
+?x-oss-process=image/resize,m_pad,w_540,h_960,color_000000
+# 视频截帧
+?x-oss-process=video/snapshot,t_4000,f_jpg,w_540,m_fast
+```
+
+?x-oss-process=image/info

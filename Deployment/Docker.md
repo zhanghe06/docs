@@ -9,7 +9,7 @@ Get Docker CE for CentOS
 # docker -v
 # docker ps
 ```
-参考: [https://docs.docker.com/install/linux/docker-ce/centos/](https://docs.docker.com/install/linux/docker-ce/centos/)
+参考: [https://docs.docker.com/engine/install/centos/](https://docs.docker.com/engine/install/centos/)
 
 Get Docker CE for Ubuntu
 ```
@@ -160,4 +160,66 @@ unless-stopped  | 类似于 always，除了当容器被停止，它是不会重�
 ```
 docker update --restart=no xxx
 docker update --restart=always xxx
+```
+
+## 网络
+
+```
+docker network ls
+```
+
+1、--network=bridge
+默认就是 bridge，即桥接网络，以桥接模式连接到宿主机，创建一个独立网络
+可以通过自定义bridge将多个容器互通
+bridge还可以使用指定容器网络和自定义网络名称
+```
+--network=netName
+--network=container:Name/ID
+```
+
+2、--network=host
+与宿主机共享网络，也就是在网络这块不会与宿主机隔离，而是共享宿主机的网络配置，并且 容器不会分配自己的ip地址
+由于不需要端口映射，host网络的性能较高.
+host模式主机网络驱动程序仅适用于Linux主机，并且不支持Docker for Mac，Docker for Windows或Docker EE for Windows Server。
+
+判断host模式是否生效
+```
+ping host.docker.internal
+# 如果是127.0.0.1就对了
+```
+
+3、--network=none
+无网络，容器将无法联网。
+
+## 修改存储目录
+
+```
+sudo systemctl stop docker
+mkdir -p /data/docker-root
+```
+
+/etc/docker/daemon.json
+```
+{
+    "data-root": "/data/docker-root"
+}
+```
+
+```
+mv /var/lib/docker/* /data/docker-root/
+sudo systemctl start docker
+sudo docker info | grep "Docker Root Dir"
+```
+
+## 清理镜像
+
+清理为None的镜像
+```
+sudo docker images | grep none | awk '{print $3}' | xargs sudo docker rmi
+```
+
+## 查看信息
+
+```
+docker inspect -f '{{.NetworkSettings.Networks.net_name.IPAddress}}' ba_mariadb
 ```

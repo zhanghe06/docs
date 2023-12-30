@@ -654,6 +654,12 @@ windows环境下，提交自动转LF，签出自动转CRLF
 $ git config --global core.autocrlf false
 ```
 
+## git status 中文路径乱码
+
+```
+git config --global core.quotepath false
+```
+
 ## tag
 
 - tag 是一个点，静态的
@@ -661,6 +667,34 @@ $ git config --global core.autocrlf false
 
 稳定版本备份用tag，新功能多人开发用branch（开发完成后merge到master）。
 
+常用命令
+```
+# 从远程存储库获取所有标签
+git fetch --all --tags
+
+# 检索最新标签
+git describe --tags `git rev-list --tags --max-count=1`
+
+# 检出指定标签至本地的分支
+git checkout tags/<tag> -b <branch>
+```
+
+## clone
+
+两种方式：
+
+1. HTTPS
+2. SSH
+
+```
+ssh-keygen -t rsa -C 'he.zhang@aishu.cn' -f ~/.ssh/aishu_id_rsa
+echo "
+Host devops.aishu.cn
+    User git
+    IdentityFile ~/.ssh/aishu_id_rsa
+    Port 22
+" >> ~/.ssh/config
+```
 
 ## gerrit
 

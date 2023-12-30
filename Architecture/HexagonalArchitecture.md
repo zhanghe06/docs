@@ -2,7 +2,16 @@
 
 ## 端口和适配器架构
 
-参考：[https://herbertograca.com/2017/09/14/ports-adapters-architecture/](https://herbertograca.com/2017/09/14/ports-adapters-architecture/)
+参考：
+
+[Ports & Adapters Architecture](https://herbertograca.com/2017/09/14/ports-adapters-architecture/)
+
+[Hexagonal Architecture, there are always two sides to every story](https://medium.com/ssense-tech/hexagonal-architecture-there-are-always-two-sides-to-every-story-bc0780ed7d9c)
+
+[Using Domain-Driven Design(DDD)in Golang](https://dev.to/stevensunflash/using-domain-driven-design-ddd-in-golang-3ee5)
+
+[DDD, Hexagonal, Onion, Clean, CQRS, … How I put it all together](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/)
+
 
 端口和适配器架构只有一个目标：将业务逻辑与系统使用的交付机制和工具隔离开来，防止逻辑泄露。
 它通过使用一种通用的编程语言结构来做到这一点：接口。

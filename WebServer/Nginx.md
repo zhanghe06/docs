@@ -56,7 +56,7 @@ nginx作为反向代理服务器的时候：
 ```
 
 
-## 限速
+## 限流模块
 http://nginx.org/en/docs/http/ngx_http_limit_req_module.html
 
 ```nginx
@@ -80,6 +80,77 @@ zone 表示漏桶的名字
 rate 表示nginx处理请求的速度有多快
 burst 表示峰值
 nodelay 表示是否延迟处理请求，还是直接503返回给客户端，如果超出rate设置的情况下。
+
+测试：
+
+```
+docker pull nginx:1.24-alpine
+
+docker run \
+    -h nginx_test \
+    --name nginx_test \
+    --restart always \
+    -p 80:80 \
+    -d \
+    nginx:1.24-alpine
+```
+
+```
+docker exec -it nginx_test sh
+
+apk add vim
+
+vim /etc/nginx/nginx.conf
+
+vim /etc/nginx/conf.d/default.conf
+
+nginx -s reload
+```
+
+查看模块
+```
+/ # nginx -V
+nginx version: nginx/1.24.0
+built by gcc 12.2.1 20220924 (Alpine 12.2.1_git20220924-r4)
+built with OpenSSL 3.0.7 1 Nov 2022 (running with OpenSSL 3.0.12 24 Oct 2023)
+TLS SNI support enabled
+configure arguments: --prefix=/etc/nginx --sbin-path=/usr/sbin/nginx --modules-path=/usr/lib/nginx/modules --conf-path=/etc/nginx/nginx.conf --error-log-path=/var/log/nginx/error.log --http-log-path=/var/log/nginx/access.log --pid-path=/var/run/nginx.pid --lock-path=/var/run/nginx.lock --http-client-body-temp-path=/var/cache/nginx/client_temp --http-proxy-temp-path=/var/cache/nginx/proxy_temp --http-fastcgi-temp-path=/var/cache/nginx/fastcgi_temp --http-uwsgi-temp-path=/var/cache/nginx/uwsgi_temp --http-scgi-temp-path=/var/cache/nginx/scgi_temp --with-perl_modules_path=/usr/lib/perl5/vendor_perl --user=nginx --group=nginx --with-compat --with-file-aio --with-threads --with-http_addition_module --with-http_auth_request_module --with-http_dav_module --with-http_flv_module --with-http_gunzip_module --with-http_gzip_static_module --with-http_mp4_module --with-http_random_index_module --with-http_realip_module --with-http_secure_link_module --with-http_slice_module --with-http_ssl_module --with-http_stub_status_module --with-http_sub_module --with-http_v2_module --with-mail --with-mail_ssl_module --with-stream --with-stream_realip_module --with-stream_ssl_module --with-stream_ssl_preread_module --with-cc-opt='-Os -fomit-frame-pointer -g' --with-ld-opt=-Wl,--as-needed,-O1,--sort-common
+```
+
+mac 自带 apache
+```
+apachectl -v
+ab -V
+
+ab -n 100 -c 10 http://localhost/
+```
+
+## 视频分片
+
+https://nginx.org/en/docs/http/ngx_http_hls_module.html
+
+```
+docker run \
+    -h nginx_test \
+    --name nginx_test \
+    --restart always \
+    -v ${PWD}/videos:/var/videos \
+    -p 80:80 \
+    -d \
+    nginx:1.24-alpine
+```
+
+```
+docker exec -it nginx_test sh
+
+apk add vim
+
+vim /etc/nginx/nginx.conf
+
+vim /etc/nginx/conf.d/default.conf
+
+nginx -s reload
+```
 
 
 ## 反向代理域名
@@ -216,3 +287,7 @@ OSError: [Errno 11] Resource temporarily unavailable
 事故原因：
 
 nginx开启了gzip，但是没有配置`gzip_buffers`
+
+## 分片
+
+

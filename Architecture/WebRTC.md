@@ -11,24 +11,25 @@
 
 [https://webrtc.github.io/adapter/adapter-latest.js](https://webrtc.github.io/adapter/adapter-latest.js)
 
-https://javascript.ruanyifeng.com/htmlapi/webrtc.html
+[https://javascript.ruanyifeng.com/htmlapi/webrtc.html](https://javascript.ruanyifeng.com/htmlapi/webrtc.html)
 
+```
 mediaRecorder.ondataavailable = function(e) {
     console.log("视频流");
     ws.send(e.data);
 };
-
+```
 
 **【直播数据流】**
 ```
-播主（user_m）            观众（user_v_01）      观众（user_v_02）
+主播（user_m）            观众（user_v_01）      观众（user_v_02）
 websocket                   websocket             websocket
     -                         ^                       ^
     | emit stream             |                       |
     |                         | room a                | room a
 app server                    |                       |
     |                         |                       |
-    +---> broadcast stream ---+-----------------------+
+    +---> broadcast stream ---+--->-------------------+
     |
     | write
     v
@@ -42,7 +43,7 @@ file system
     ^                     ^                       ^
     |                     |                       |
     |                     |                       |
-    +---------------------+-----------------------+
+    +--->-----------------+--->-------------------+
     |
 app server
     |

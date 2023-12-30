@@ -116,8 +116,8 @@ vultr 默认是通过系统动态防火墙firewalld控制规则的
 ```
 mkdir kcptun
 cd kcptun
-wget https://github.com/xtaci/kcptun/releases/download/v20210103/kcptun-linux-amd64-20210103.tar.gz
-tar zxvf kcptun-linux-amd64-20210103.tar.gz
+wget https://github.com/xtaci/kcptun/releases/download/v20230214/kcptun-linux-amd64-20230214.tar.gz
+tar zxvf kcptun-linux-amd64-20230214.tar.gz
 ```
 
 - **服务端配置**
@@ -252,6 +252,10 @@ systemctl restart kcp-client
 export http_proxy=socks5://127.0.0.1:1080
 export https_proxy=socks5://127.0.0.1:1080
 
+# 设置代理
+export http_proxy=http://127.0.0.1:1087
+export https_proxy=http://127.0.0.1:1087
+
 # 取消代理
 unset http_proxy
 unset https_proxy
@@ -259,6 +263,7 @@ unset https_proxy
 
 ```
 curl -k https://ifconfig.me
+curl -L ifconfig.me
 ```
 
 ## 测速
@@ -272,6 +277,7 @@ npm install --global fast-cli
 手机`Play Store`安装`kcptun`
 ```
 手机管家 > 自启动管理 > 点开kcptun
+设置 > 应用设置 > 授权管理 > 自启动管理 > 点开kcptun
 ```
 
 ## 检测IP是否被封
@@ -294,3 +300,8 @@ export http_proxy=http://127.0.0.1:8118
 export https_proxy=http://127.0.0.1:8118
 ```
 
+## Windows 客户端配置指南
+
+- 支持aes-256-cfb协议的[Shadowsocks-4.3.3.170.zip](https://github.com/shadowsocks/shadowsocks-windows/releases/download/4.3.3.0/Shadowsocks-4.3.3.170.zip)
+- [kcptun](https://github.com/xtaci/kcptun/releases) 解压后得到kcptun_gclient.exe
+- Chrome 代理管理插件 [SwitchySharp](https://www.switchysharp.com/install.html)

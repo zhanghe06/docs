@@ -401,13 +401,60 @@ sudo ./MPI3508-show
 
 使用官方推荐的[Raspberry Pi Imager](https://www.raspberrypi.com/software/)工具界面烧录系统到SD卡
 
+设置
+```
+设置主机名: raspberrypi
+开启SSH服务: 使用密码登录
+Set username and password
+Username: zhanghe
+Password: 123456
+配置WIFI: 
+语言设置: Asia/Shanghai
+键盘布局: us
+```
+
+
+```
+sudo apt-get install mlocate
+sudo updatedb
+locate libpcap.so.1
+sudo apt-get install vim
+
+echo "/usr/lib" >> /etc/ld.so.conf
+sudo ldconfig
+```
+
 ssh zhanghe@192.168.3.159
 ```
 zhanghe
 123456
 ```
 
+屏幕
 ```
 git clone https://github.com/goodtft/LCD-show.git
-scp -r LCD-show zhanghe@192.168.3.159:~
+scp -r LCD-show zhanghe@192.168.0.107:~
+
+ssh zhanghe@192.168.0.107
+chmod -R 755 LCD-show
+cd LCD-show/
+sudo ./MPI3508-show
+```
+注意：
+1、电源 2.4V 1A
+2、貌似只能放在home目录
+
+
+## raspberrypi镜像
+
+- [阿里云raspberrypi镜像](https://developer.aliyun.com/mirror/raspberrypi)
+
+```
+sudo nano /etc/apt/sources.list
+
+deb http://mirrors.aliyun.com/raspbian/raspbian/ bullseye  main non-free contrib rpi
+deb-src http://mirrors.aliyun.com/raspbian/raspbian/ bullseye main non-free contrib rpi
+
+sudo apt-get update
+sudo apt-get upgrade -y
 ```

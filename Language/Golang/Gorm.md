@@ -139,3 +139,30 @@ func (m *UserRedPacket) TableName() string {
 	return "user_red_packet"
 }
 ```
+
+## 关联查询
+
+对于需要关联查询的场景，可以做双向绑定（Belongs To、Has One）
+
+```
+// Employee 
+// @Description 雇员
+type Employee struct {
+    ID   uint   `gorm:"primary_key;autoIncrement:true"` 
+    Name string 
+    //[belongs to][一对一]声明写法如下
+    CID int     //Company ID
+    C   Company `gorm:"foreignKey:CID"` 
+
+// Company
+// @Description: 公司
+type Company struct {
+    ID   uint   `gorm:"primary_key;autoIncrement:true"` 
+    Name string `gorm:"unique"`                       
+    Employee  *Employee
+}
+```
+
+参考:
+
+- [https://gorm.io/zh_CN/docs/has_one.html#自引用-Has-One](https://gorm.io/zh_CN/docs/has_one.html#%E8%87%AA%E5%BC%95%E7%94%A8-Has-One)

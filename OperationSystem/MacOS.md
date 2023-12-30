@@ -1,5 +1,50 @@
 # MacOS
 
+## 安装
+
+安装 iTerm2 oh-my-zsh
+
+zsh-autosuggestions：历史补全
+```
+# 安装插件
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git ${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-autosuggestions
+
+# 配置插件
+vim ~/.zshrc
+
+plugins=(
+    git
+    # other plugins...
+    zsh-autosuggestions
+)
+```
+
+安装 Homebrew
+```
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
+```
+
+安装 wget
+```
+brew install wget
+brew install python@3.10
+```
+
+```
+brew install pyenv
+pyenv install 2.7.18
+export PATH="$(pyenv root)/shims:${PATH}"
+echo 'PATH=$(pyenv root)/shims:$PATH' >> ~/.zshrc
+pyenv global 2.7.18
+python --version
+```
+
+```
+brew install mysql
+brew install mysql-connector-c
+```
+
+
 升级`Big Sur`之后，需要安装`Xcode 13 beta 2`，大约需要11G空间
 
 [https://developer.apple.com/download/](https://developer.apple.com/download/)

@@ -1,5 +1,9 @@
 # NSQ
 
+[https://nsq.io/](https://nsq.io/)
+
+[https://github.com/nsqio/nsq](https://github.com/nsqio/nsq)
+
 与消息队列相关的协议和规范有JMS、AMQP、MQTT以及OpenMessaging，而MQTT中规定了三种传递标准：
 
 ```
@@ -18,3 +22,7 @@ Exactly once：恰好一次。消息传递时，只会被送达一次，不允�
 一条数据重复出现两次，数据库里就只有一条数据，这就保证了系统的幂等性。
 
 幂等性，通俗点说，就一个数据，或者一个请求，给你重复来多次，你得确保对应的数据是不会改变的，不能出错。
+
+## 延时队列
+
+nsq支持延时消息的投递，默认支持最大的毫秒数为3600000毫秒也就是60分钟，不过这个值可以在nsqd启动的时候用`-max-req-timeout`参数修改最大值。

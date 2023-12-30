@@ -50,3 +50,23 @@ $ ssh username@192.168.1.112
 username为192.168.1.112 机器上的用户，需要输入密码。
 
 断开连接：exit
+
+## 排错
+
+`Unable to negotiate with x.x.x.x port 22: no matching host key type found. Their offer: ssh-rsa,ssh-dss`
+
+自 2021 年 8 月 20 日发布的 OpenSSH 8.8 起，ssh-rsa 签名方案已被弃用。
+
+可以通过添加`-o HostKeyAlgorithms=+ssh-rsa`参数解决
+
+```
+alias dev_mysql="sshpass -p '123456' ssh root@x.x.x.x -o StrictHostKeyChecking=no -o HostKeyAlgorithms=+ssh-rsa"
+```
+
+或者更新ssh配置
+```
+cat ~/.ssh/config
+
+Host *
+  HostKeyAlgorithms ssh-rsa
+```

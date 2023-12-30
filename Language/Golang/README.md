@@ -170,3 +170,7 @@ err == EOF
 ## 内存泄露
 
 ## 资源泄露
+
+## 代码规范
+
+官方规范：[https://github.com/golang/go/wiki/CodeReviewComments](https://github.com/golang/go/wiki/CodeReviewComments)

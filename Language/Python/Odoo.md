@@ -31,18 +31,16 @@ mkdir odoo_project
 [http://localhost:8069](http://localhost:8069)
 [http://localhost:8069/web/database/manager](http://localhost:8069/web/database/manager)
 
-
-配置名称 | 配值
---- | ---
-Master Password | 4j7q-td3g-iyug
-Database Name | erp
-Email | zhang_he06@163.com
-Password | 123456
-Phone number | 13818732593
-Language | Chinese(Simplified)/简体中文
-Country | China
-Demo data | 
-
+| 配置名称            | 配值                       |
+| --------------- | ------------------------ |
+| Master Password | 4j7q-td3g-iyug           |
+| Database Name   | erp                      |
+| Email           | zhang_he06@163.com       |
+| Password        | 123456                   |
+| Phone number    | 13818732593              |
+| Language        | Chinese(Simplified)/简体中文 |
+| Country         | China                    |
+| Demo data       |                          |
 
 ## 开发环境搭建
 
@@ -60,4 +58,3 @@ git clone https://github.com/odoo/odoo.git -b 16.0 --depth=1
 企业版源码下载，需要订阅支持客制化的企业版
 
 https://aishu1.odoo.com/
-

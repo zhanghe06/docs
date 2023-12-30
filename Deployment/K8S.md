@@ -88,23 +88,23 @@ kubectl version
 kubectl api-resources
 ```
 
-资源 | 简称
---- | ---
-namespaces | ns
-nodes | no
-endpoints | ep
-ingresses | ing
-deployments | deploy
-services | svc
-pods | po
-replicaset | rs
-statefulset | sts
-daemonsets | ds
-customresourcedefinitions | crd
-configmaps | cm
-secrets | secret
-jobs | job
-cronjobs | cronjob
+资源 | 简称 | 说明
+--- | --- | ---
+namespaces | ns | 命名空间
+nodes | no | 节点
+endpoints | ep | 端点
+ingresses | ing | 入口
+deployments | deploy | 部署
+services | svc | 服务
+pods | po | 容器组
+replicaset | rs | 副本集
+statefulset | sts | 状态集
+daemonsets | ds | 守护进程
+customresourcedefinitions | crd | 自定义资源定义集
+configmaps | cm | 配置
+secrets | secret | 安全配置
+jobs | job | 任务
+cronjobs | cronjob | 定时任务
 
 指定命名空间（全部或单个）
 ```
@@ -272,7 +272,7 @@ Ingress 控制器有各种类型，包括 Google Cloud Load Balancer， Nginx，
 
 https://kubernetes.github.io/ingress-nginx/deploy/#docker-for-mac
 
-### 集群内部访问外部服务
+### Endpoint 集群内部访问外部服务
 
 k8s访问集群外独立的服务最好的方式是采用Endpoint方式，以mysql服务为例：
 
@@ -302,6 +302,122 @@ subsets:
 ```
 
 就是将外部IP地址和服务引入到k8s集群内部，由service作为一个代理来达到能够访问外部服务的目的。
+
+### operator
+
+[https://github.com/kubernetes-sigs/kubebuilder](https://github.com/kubernetes-sigs/kubebuilder)
+
+[https://github.com/operator-framework/operator-sdk](https://github.com/operator-framework/operator-sdk)
+
+[https://operatorhub.io](https://operatorhub.io)
+
+[https://access.redhat.com/documentation/zh-cn/openshift_container_platform/4.2/html/operators/osdk-helm](https://access.redhat.com/documentation/zh-cn/openshift_container_platform/4.2/html/operators/osdk-helm)
+
+Operator 用途
+
+Operator 可以配置工具，根据事件调整系统状态，并对故障做出反应。
+
+若您有以下需求，可能会需要用到 Operator：
+
+- 按需部署一个应用程序
+- 需要备份和恢复应用程序的状态（如数据库）
+- 处理应用程序代码的升级以及相关更改，例如数据库架构或额外的配置设置
+- 发布一个服务，要让不支持Kubernetes API的应用程序能够发现
+- 模拟整个或部分集群中的故障以测试其弹性
+- 在没有内部成员选举程序的情况下为分布式应用程序选择领导者
+
+
+#### kubebuilder
+
+参考：[10分钟开发Kubernetes Operator](https://www.jianshu.com/p/8636ed03396f)
+
+1. 设置开发环境
+
+```
+go version
+docker version
+kubectl version
+```
+
+```
+curl -L -o kubebuilder https://go.kubebuilder.io/dl/latest/$(go env GOOS)/$(go env GOARCH) && chmod +x kubebuilder && mv kubebuilder /usr/local/bin/
+kubebuilder version
+```
+
+2. 构建简单的Operator
+```
+kubebuilder init --domain my.domain --repo my.domain/tutorial
+go get sigs.k8s.io/controller-runtime@v0.11.2
+go mod tidy
+```
+
+```
+kubebuilder create api --group tutorial --version v1 --kind Foo
+go mod tidy
+make generate
+```
+
+3. 自定义CRD和Controller（精华）
+```
+
+```
+
+4. 运行Controller
+```
+make install
+kubectl get crds
+make run
+
+```
+
+5. 测试控制器
+```
+kubectl apply -f config/samples
+kubectl describe foos
+```
+
+
+#### operator sdk
+
+参考：[Getting Started With Kubernetes Operators (Helm Based)](https://www.velotio.com/engineering-blog/getting-started-with-kubernetes-operators-helm-based-part-1)
+
+1. Let’s first install the operator sdk
+```
+go get -d github.com/operator-framework/operator-sdk
+cd $GOPATH/src/github.com/operator-framework/operator-sdk
+git checkout master
+make dep
+make install
+```
+
+2. Setup the project
+```
+operator-sdk new bookstore-operator \
+  --api-version=velotio.com/v1alpha1 \
+  --kind=BookStore \
+  --type=helm \
+  --helm-chart=book-store \
+  --helm-chart-repo=https://akash-gautam.github.io/helmcharts/
+```
+
+3. Build the Bookstore-operator Image
+```
+operator-sdk build akash125/bookstore-operator:v0.0.1
+```
+
+4. Run the Bookstore-operator
+```
+kubectl create -f deploy/service_account.yaml
+kubectl create -f deploy/role.yaml
+kubectl create -f deploy/role_binding.yaml
+kubectl create -f deploy/operator.yaml
+```
+
+5. Deploy the Bookstore App
+```
+kubectl apply -f deploy/crds/velotio_v1alpha1_bookstore_crd.yaml
+kubectl apply -f deploy/crds/velotio_v1alpha1_bookstore_cr.yaml
+```
 
 ### 排错
 

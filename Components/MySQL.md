@@ -51,8 +51,8 @@ ALL PRIVILEGES：当前用户的所有权限
 ON：介词
 *.*：当前用户对所有数据库和表的相应操作权限
 TO：介词
-‘root’@’%’：权限赋给root用户，所有ip都能连接
-IDENTIFIED BY ‘123456’：连接时输入密码，密码为123456
+'root'@'%'：权限赋给root用户，所有ip都能连接
+IDENTIFIED BY '123456'：连接时输入密码，密码为123456
 WITH GRANT OPTION：允许级联赋权
 ```
 
@@ -116,12 +116,22 @@ CREATE TABLE `position` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='职位表';
 ```
 
-## 数据表删除
+## 数据表删除（DROP）
 ```
 DROP TABLE IF EXISTS `user`;
 DROP TABLE IF EXISTS `company`;
 DROP TABLE IF EXISTS `position`;
 ```
+
+## 数据表清除（TRUNCATE）
+```
+SET FOREIGN_KEY_CHECKS=0; # 禁用外键
+
+TRUNCATE TABLE admininfo; # 清除数据
+
+SET FOREIGN_KEY_CHECKS=1; # 启用外键
+```
+若存在foreign key关联，无法使用TRUNCATE，执行前需要禁用外键
 
 ## 忘记 MySQL 的 root 密码
 ```
@@ -243,3 +253,20 @@ lines terminated by '\n' -- 记录分隔符，如字段本身也含\n，那么�
 ignore 1 lines -- 忽略首行表头
 (supplier_name, category_level_1, category_level_2); -- 每一行文本按顺序对应的表字段，建议不要省略
 ```
+
+## 两阶段提交
+
+#### bin log 二进制日志、归档日志
+
+场景：
+- 主从复制
+- 数据恢复
+
+#### redo log 事务日志、重做日志
+
+为了保证持久性，记录事务对数据页做了哪些修改
+
+#### undo log 事务日志、撤销日志
+
+为了保证原子性，主要记录了数据的逻辑变化
+

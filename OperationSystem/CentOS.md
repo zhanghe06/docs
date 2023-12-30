@@ -10,6 +10,18 @@
 
 应用程序容器: [https://hub.docker.com/u/centos](https://hub.docker.com/u/centos)
 
+查看系统版本
+```
+# cat /etc/redhat-release
+CentOS release 6.6 (Final)
+```
+
+查看CPU架构
+```
+# uname -m
+x86_64
+```
+
 ```
 # 解决中文乱码
 export LANG=C.UTF-8

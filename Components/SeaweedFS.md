@@ -183,3 +183,12 @@ weed volume -dir=./1 -port=8080 -mserver=localhost:9333,localhost:9334,localhost
 weed volume -dir=./2 -port=8081 -mserver=localhost:9333,localhost:9334,localhost:9335
 weed volume -dir=./3 -port=8082 -mserver=localhost:9333,localhost:9334,localhost:9335
 ```
+
+
+## WebDAV
+
+[https://github.com/seaweedfs/seaweedfs/wiki/WebDAV](https://github.com/seaweedfs/seaweedfs/wiki/WebDAV)
+
+[Accessing WebDAV with Windows](https://help.dreamhost.com/hc/en-us/articles/216473357-Accessing-WebDAV-with-Windows)
+
+[Access SeaweedFS via WebDAV on Mac](https://github.com/seaweedfs/seaweedfs/wiki/WebDAV#access-seaweedfs-via-webdav-on-mac)

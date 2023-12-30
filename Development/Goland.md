@@ -17,6 +17,11 @@ git换行符配置
 git config --global core.autocrlf false
 ```
 
+切换格式化风格
+```
+File > Settings > Editor > Code Style > Go > Imports > Sorting type: goimports
+```
+
 ## 远程开发（goland 2021.3 之前版本）
 
 最佳实践：
@@ -108,15 +113,39 @@ docker run --rm -p 8887:8887 -it registry.jetbrains.team/p/prj/containers/projec
 docker run -d -p 8887:8887 -v xxx:/usr/local/go registry.jetbrains.team/p/prj/containers/projector-goland
 ```
 
-## 多版本切换
+## 多版本安装
 
-https://go.dev/dl/
+[https://go.dev/dl/](https://go.dev/dl/)
+
+### Linux|MacOS 环境
 
 版本 | 路径
 --- | ---
 1.16 | [/usr/local/go1.16](https://go.dev/dl/go1.16.15.darwin-amd64.tar.gz)
 1.18 | [/usr/local/go1.18](https://go.dev/dl/go1.18.10.darwin-amd64.tar.gz)
-1.20 | [/usr/local/go1.20](https://go.dev/dl/go1.20.4.darwin-amd64.tar.gz)
+1.20 | [/usr/local/go1.20](https://go.dev/dl/go1.20.12.darwin-amd64.tar.gz)
+
+```
+# 下载二进制版本
+wget https://go.dev/dl/go1.16.15.darwin-amd64.tar.gz
+wget https://go.dev/dl/go1.18.10.darwin-amd64.tar.gz
+wget https://go.dev/dl/go1.20.12.darwin-amd64.tar.gz
+# 解压至指定目录并重命名
+tar -zxvf go1.16.15.darwin-amd64.tar.gz -C /usr/local --transform='s/go/go1.16/'
+tar -zxvf go1.18.10.darwin-amd64.tar.gz -C /usr/local --transform='s/go/go1.18/'
+tar -zxvf go1.20.12.darwin-amd64.tar.gz -C /usr/local --transform='s/go/go1.20/'
+```
+
+```
+# 下载二进制版本
+wget https://go.dev/dl/go1.16.15.darwin-arm64.tar.gz
+wget https://go.dev/dl/go1.18.10.darwin-arm64.tar.gz
+wget https://go.dev/dl/go1.20.12.darwin-arm64.tar.gz
+# 解压至指定目录并重命名
+tar -zxvf go1.16.15.darwin-arm64.tar.gz -C /usr/local --transform='s/go/go1.16/'
+tar -zxvf go1.18.10.darwin-arm64.tar.gz -C /usr/local --transform='s/go/go1.18/'
+tar -zxvf go1.20.12.darwin-arm64.tar.gz -C /usr/local --transform='s/go/go1.20/'
+```
 
 环境变量 `~/.zshrc`
 ```
@@ -135,3 +164,48 @@ export GOPATH=$HOME/go1.16
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 ```
 
+### Windows 环境
+
+```
+# 选择版本
+set GOROOT=D:\go1.16.15.windows-amd64\go
+set GOPATH=D:\go1.16
+
+set GOROOT=D:\go1.18.10.windows-amd64\go
+set GOPATH=D:\go1.18
+
+set PATH=%GOROOT%\bin;%GOPATH%\bin;%PATH%
+```
+
+您可以按照以下步骤在Windows上配置多个版本的Golang：
+
+1. 下载和安装您需要的Golang版本。
+2. 将每个版本的Golang安装到不同的文件夹中。
+3. 在环境变量中设置每个版本的Golang路径。
+   - 右键单击“此电脑”，选择“属性”。
+   - 单击“高级系统设置”。
+   - 单击“环境变量”。
+   - 在“系统变量”下，单击“新建”。
+   - 输入变量名为“GOROOT”，变量值为Golang的安装路径。
+4. 在环境变量中设置GOPATH。
+   - 在“系统变量”下，找到“GOPATH”变量，如果不存在则新建。
+   - 将GOPATH设置为您的工作空间路径。
+5. 在PATH环境变量中添加每个版本的Golang路径。
+   - 在“系统变量”下，找到“Path”变量，双击打开编辑窗口。
+   - 将每个版本的Golang路径添加到“Path”变量中，用分号分隔。
+
+完成上述步骤后，您就可以在命令行中使用不同版本的Golang了。例如，要在命令行中使用Golang 1.16，您可以输入以下命令：
+
+```
+set GOROOT=D:\go1.16.15.windows-amd64\go
+set GOPATH=D:\go1.16
+```
+
+然后您就可以使用Golang 1.16了。
+
+
+### 编辑器配置
+```
+Settings > Go > GOROOT > 选择项目对应的SDK版本
+Settings > Go > GOPATH > 取消勾选"Use GOPATH that's defined in system environment"；在Project GOPATH中添加对应版本的GOPATH路径
+```

@@ -26,6 +26,8 @@ Windows 修改 hosts `C:\Windows\System32\drivers\etc\hosts`
 
 [https://hstspreload.appspot.com/](https://hstspreload.appspot.com/)
 
+状态码：307
+
 ## 免费工具
 
 - **[Let's Encrypt](https://letsencrypt.org/)**
