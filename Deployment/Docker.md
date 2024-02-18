@@ -223,3 +223,29 @@ sudo docker images | grep none | awk '{print $3}' | xargs sudo docker rmi
 ```
 docker inspect -f '{{.NetworkSettings.Networks.net_name.IPAddress}}' ba_mariadb
 ```
+
+## 僵尸进程回收
+
+`docker run`启动容器时可以添加`--init`参数，此时`Docker`会使用`docker-init`作为1号进程，帮你管理容器内子进程，例如回收僵尸进程等。
+
+## 将当前普通用户加入到docker组
+
+```
+sudo gpasswd -a $USER docker        # 将当前普通用户加入到docker组
+newgrp docker                       # 更新docker组
+```
+
+普通用户执行docker命令无需sudo
+
+## 动态更新容器资源限制
+
+```
+# 查看容器资源占用
+docker stats
+
+# 更新容器内存限制
+docker container update <container_name> --memory="512m" --memory-swap="512m"
+
+# 更新容器核数限制
+docker container update <container_name> --cpus="0.5"
+```

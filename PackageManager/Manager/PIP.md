@@ -69,6 +69,14 @@ pip freeze | xargs pip uninstall -y
 
 ## virtualenv
 
+```
+python2 -m pip install virtualenv
+python2 -m virtualenv .venv
+
+python3 -m pip install virtualenv
+python3 -m virtualenv .venv
+```
+
 [installing-using-pip-and-virtual-environments](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/)
 
 virtualenv --no-site-packages .venv -p python2

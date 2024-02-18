@@ -71,7 +71,7 @@ def loop(angle):
     # 滑台：滑台可以组装多轴：十字滑台，龙门式，三轴
     # 电机初始运行方向由A+和A-控制；默认接线方式（黑B-、绿B+、蓝A-、红A+）逆时针输出（反转）滑台向左移动
 
-    print ("启动")
+    print("启动")
     # 步距角 1.8°
     angle_step = 1.8
 
@@ -90,7 +90,7 @@ def loop(angle):
     forward(0.0001, pulse_step)  # 发射脉冲时间间隔0.0001（单位秒）
     time.sleep(1)  # sleep 1s
     backward(0.0001, pulse_step)  # 发射脉冲时间间隔0.0001（单位秒）
-    print ("结束")
+    print("结束")
     stop()  # stop
     time.sleep(1)  # sleep 1s
 
@@ -105,5 +105,5 @@ if __name__ == '__main__':  # Program start from here
         try:
             a = input("输入旋转角度:")
             loop(float(a))
-        except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child function destroy() will be  executed.
+        except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child function destroy() will be executed.
             destroy()

@@ -45,3 +45,20 @@ vim /etc/default/rsync
 cp /usr/share/doc/rsync/examples/rsyncd.conf /etc
 ```
 
+## 单位
+
+```
+在计算存储容量时，K代表1024，即：
+    1MByte=1024KByte=1024*1024Byte
+    其含义为： K为Kibi的缩写，1 KiB (kibibyte)=210 bytes=1024 bytes
+
+在计算网卡速率时，k代表1000，即：
+   1Gbps=1000*1Mbps=1000*1000*kbps=1000*1000*1000bps
+   其含义为： k为kilo的缩写，1 kB (kilobyte)=103 bytes=1000 bytes
+```
+
+内存单位是kB，采用1000换算
+```
+root@ubuntu:~# grep MemTotal /proc/meminfo
+MemTotal:        7947492 kB
+```

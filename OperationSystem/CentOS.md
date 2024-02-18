@@ -46,3 +46,37 @@ vim /etc/profile
 export LC_ALL="zh_CN.utf8"
 reboot
 ```
+
+## CentOS 6 源404
+
+```
+lsb_release -a
+
+
+# 更新基础源
+cp /etc/yum.repos.d/CentOS-Base.repo{,.bak}
+wget --no-check-certificate -O /etc/yum.repos.d/CentOS-Base.repo https://static.lty.fun/%E5%85%B6%E4%BB%96%E8%B5%84%E6%BA%90/SourcesList/Centos-6-Vault-Aliyun.repo
+yum clean all && yum makecache
+```
+
+安装docker
+```
+yum install https://get.docker.com/rpm/1.7.1/centos-6/RPMS/x86_64/docker-engine-1.7.1-1.el6.x86_64.rpm
+yum -y install docker-io
+```
+
+```
+service docker status
+service docker start
+docker -d
+
+docker version
+```
+
+
+## 查看内网IP
+
+查看内网IP
+```
+hostname -I | awk '{print $1}'
+```

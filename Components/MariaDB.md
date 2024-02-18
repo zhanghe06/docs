@@ -911,3 +911,9 @@ docker cp mariadb-node02:/etc/mysql /opt/mariadb/conf
 引申出一个问题，为什么按这个标准设计，依据是什么？
 思考一下，InnoDB一棵B+树可以存放多少行数据？
 简单回答是：约2千万
+
+
+## Replace
+
+MySQL 自4.1版以后开始支持INSERT … ON DUPLICATE KEY UPDATE
+

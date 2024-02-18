@@ -303,5 +303,25 @@ export https_proxy=http://127.0.0.1:8118
 ## Windows 客户端配置指南
 
 - 支持aes-256-cfb协议的[Shadowsocks-4.3.3.170.zip](https://github.com/shadowsocks/shadowsocks-windows/releases/download/4.3.3.0/Shadowsocks-4.3.3.170.zip)
-- [kcptun](https://github.com/xtaci/kcptun/releases) 解压后得到kcptun_gclient.exe
-- Chrome 代理管理插件 [SwitchySharp](https://www.switchysharp.com/install.html)
+- [kcptun](https://github.com/xtaci/kcptun/releases) 解压后得到kcptun_gclient.exe，放到shadowsocks.exe同级目录
+- Chrome 代理管理插件 [SwitchySharp](https://www.switchysharp.com/install.html) 解压switchysharp-v1.10.4.zip，得到SwitchySharp.crx，重命名为SwitchySharp.rar，再次解压为SwitchySharp目录（主要是为了解决CRX_HEADER_INVALID），Chrome加载已解压的扩展程序
+
+
+shadowsocks服务器配置
+```
+服务器地址：45.76.103.60
+服务器端口：9020
+密码：RbdJ36^(^0
+加密：aes-256-cfb
+插件程序：C:\Users\张和\Downloads\Shadowsocks-4.3.3.170\client_windows_arm64.exe
+插件选项：勾选需要命令行参数
+插件参数：-l %SS_LOCAL_HOST%:%SS_LOCAL_PORT% -r %SS_REMOTE_HOST%:%SS_REMOTE_PORT% --key <kcptun_password> --crypt aes --mode fast2 --mtu 1350 --datashard 10 --parityshard 3 --sndwnd 1024
+备注：日本东京
+```
+
+SwitchySharp情景模式配置
+```
+HTTP代理：127.0.0.1
+端口：1080
+勾选对所有协议均使用相同的代理服务器
+```

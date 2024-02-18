@@ -142,9 +142,9 @@ wget https://go.dev/dl/go1.16.15.darwin-arm64.tar.gz
 wget https://go.dev/dl/go1.18.10.darwin-arm64.tar.gz
 wget https://go.dev/dl/go1.20.12.darwin-arm64.tar.gz
 # 解压至指定目录并重命名
-tar -zxvf go1.16.15.darwin-arm64.tar.gz -C /usr/local --transform='s/go/go1.16/'
-tar -zxvf go1.18.10.darwin-arm64.tar.gz -C /usr/local --transform='s/go/go1.18/'
-tar -zxvf go1.20.12.darwin-arm64.tar.gz -C /usr/local --transform='s/go/go1.20/'
+sudo tar -zxvf go1.16.15.darwin-arm64.tar.gz -C /usr/local && sudo mv /usr/local/go{,1.16}
+sudo tar -zxvf go1.18.10.darwin-arm64.tar.gz -C /usr/local && sudo mv /usr/local/go{,1.18}
+sudo tar -zxvf go1.20.12.darwin-arm64.tar.gz -C /usr/local && sudo mv /usr/local/go{,1.20}
 ```
 
 环境变量 `~/.zshrc`
