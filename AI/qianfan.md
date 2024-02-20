@@ -20,11 +20,11 @@ tokens约等于「服务输入+服务输出」的「中文字+其他语种单词
 ```
 AI_BD_QIANFAN = {
     # https://console.bce.baidu.com/iam/#/iam/accesslist
-    'access_key': 'ALTAKyoALk6TmP3qrD5lOl6nJd',
-    'secret_key': 'e891b3a551a34ea481e8e59cccbc0c09',  # 查看需要短信验证码
+    'access_key': '',
+    'secret_key': '',  # 查看需要短信验证码
     # https://console.bce.baidu.com/qianfan/ais/console/applicationConsole/application
-    'app_id': '47266305',
-    'app_api_key': 'FK3rjQqrGKXMHoD3lbm3ztuI',
-    'app_secret_key': '6FRjBhGgnTNshg0GSeoiWifxeBZuUYS3',
+    'app_id': '',
+    'app_api_key': '',
+    'app_secret_key': '',
 }
 ```
