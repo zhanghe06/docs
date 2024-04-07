@@ -56,6 +56,7 @@ NAS 套件（RockPi4C主板*1、外壳*1、扩展卡*1、eMMC*1） + WD2.5寸1T�
 - [使用STS临时访问凭证访问OSS](https://help.aliyun.com/zh/oss/developer-reference/use-temporary-access-credentials-provided-by-sts-to-access-oss)
 - [对象存储 OSS](https://help.aliyun.com/zh/oss/)
 - [图片处理](https://help.aliyun.com/zh/oss/user-guide/latest-version-of-img-guide/)
+- [x-oss-process使用指南](https://help.aliyun.com/zh/imm/user-guide-for-x-oss-process)
 
 参数处理
 ```

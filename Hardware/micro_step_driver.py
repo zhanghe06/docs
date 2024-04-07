@@ -86,10 +86,12 @@ def loop(angle):
     # 间隔时间（>5us=0.000005s）
 
     # 脉冲数
-    pulse_step = int(angle/(angle_step/micro_step))
-    forward(0.0001, pulse_step)  # 发射脉冲时间间隔0.0001（单位秒）
-    time.sleep(1)  # sleep 1s
-    backward(0.0001, pulse_step)  # 发射脉冲时间间隔0.0001（单位秒）
+    pulse_step = int(abs(angle)/(angle_step/micro_step))
+    if angle > 0:
+        forward(0.0001, pulse_step)  # 发射脉冲时间间隔0.0001（单位秒）
+    else:
+        backward(0.0001, pulse_step)  # 发射脉冲时间间隔0.0001（单位秒）
+    # time.sleep(1)  # sleep 1s
     print("结束")
     stop()  # stop
     time.sleep(1)  # sleep 1s
@@ -104,6 +106,8 @@ if __name__ == '__main__':  # Program start from here
     while True:
         try:
             a = input("输入旋转角度:")
+            if not a:
+                continue
             loop(float(a))
         except KeyboardInterrupt:  # When 'Ctrl+C' is pressed, the child function destroy() will be executed.
             destroy()

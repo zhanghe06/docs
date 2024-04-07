@@ -122,10 +122,11 @@ systemctl start frpc
 ```
 
 
-## 使用 systemd
+## 使用 systemd 创建后台服务
 
 [https://gofrp.org/zh-cn/docs/setup/systemd](https://gofrp.org/zh-cn/docs/setup/systemd)
 
+服务端
 ```
 $ sudo vim /etc/systemd/system/frps.service
 ```
@@ -159,4 +160,54 @@ sudo systemctl stop frps
 sudo systemctl restart frps
 # 查看frp状态
 sudo systemctl status frps
+```
+
+
+客户端
+```
+$ sudo vim /etc/systemd/system/frpc.service
+```
+
+```
+[Unit]
+# 服务名称，可自定义
+Description = frp client
+After = network-online.target syslog.target
+Wants = network-online.target
+
+[Service]
+Type = simple
+# 启动frpc的命令，需修改为您的frpc的安装路径
+ExecStart = /usr/bin/frpc -c /etc/frp/frpc.toml
+Restart = always
+RestartSec = 30s
+
+[Install]
+WantedBy = multi-user.target
+```
+
+```
+# 配置开机启动
+sudo systemctl enable frpc
+# 启动frp
+sudo systemctl start frpc
+# 停止frp
+sudo systemctl stop frpc
+# 重启frp
+sudo systemctl restart frpc
+# 查看frp状态
+sudo systemctl status frpc
+```
+
+## 测试连接
+
+```
+ssh -o Port=6000 root@x.x.x.x
+
+curl -L http://x.x.x.x:58080
+```
+
+远程拷贝
+```
+scp -P 6000 image_latest.tar.gz root@x.x.x.x:~/
 ```

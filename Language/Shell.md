@@ -28,6 +28,11 @@ echo 'www.baidu.com?a=b' | awk -F "\?" '{print $1}'
 find . -name "*\?*" | xargs -I ls | awk -F "\?" '{print "mv "$0" "$1}' | sh
 ```
 
+去除当前目录下所有.开头的文件名
+```
+find . -name '.*' | xargs rm
+```
+
 将换行符`CRLF`转为`CR`
 ```
 zip -r -ll zipfile.zip some_dir/

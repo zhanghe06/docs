@@ -8,7 +8,7 @@
 - [App支付]()
 - [支付宝公钥](https://opendocs.alipay.com/support/01rauu)
 - [教程](https://blog.csdn.net/qq_56282336/article/details/130845610)
-- 
+- [当面付接口如何计算优惠](https://developer.aliyun.com/article/710915)
 
 
 2、下载沙盒版支付宝并使用沙盒账号中的买家信息进行登陆，之后使用此账号登陆的支付宝来进行扫码
@@ -67,3 +67,9 @@ POST方式
 --- | --- | ---
 fail	| 消息获取失败	| 重试
 success	| 消息获取成功	| 不重试
+
+
+## 开发
+
+三步实现支付宝支付【go语言 支付宝沙箱】
+https://blog.csdn.net/xiao_xiao_w/article/details/136586052

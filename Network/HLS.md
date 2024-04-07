@@ -88,6 +88,38 @@ python server.py 9000
 python -m SimpleHTTPServer 9000
 ```
 
+## FFprobe
+
+提取音频元数据
+```
+ffprobe -v quiet -show_format -show_streams -print_format json "程响-可能.mp3"
+
+ffprobe -show_streams 大欢-化风行万里.mp3
+```
+
+添加歌词
+```
+ffmpeg -i 大欢-化风行万里.mp3 -metadata lyrics-eng="[00:00.00]化风行万里-大欢" output.mp3
+```
+
+添加封面
+```
+
+```
+
+添加
+```
+title 曲名
+artist 歌手
+album 专辑
+```
+
+播放音频
+```
+ffplay output.mp3
+ffplay -i -vf subtitles=就是南方凯-离别开出花.lrc -i output.mp3 -x 800 -y 600
+```
+
 ## 环境构建
 
 

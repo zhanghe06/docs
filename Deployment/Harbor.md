@@ -13,3 +13,11 @@ docker push reg.yourdomain.com/myproject/myrepo:mytag
     "insecure-registries" : ["myregistrydomain.com:5000", "0.0.0.0"]
 }
 ```
+
+## 本地安装
+
+https://github.com/goharbor/harbor/releases/download/v2.10.1/harbor-offline-installer-v2.10.1.tgz
+
+```
+
+```

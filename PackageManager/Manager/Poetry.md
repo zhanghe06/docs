@@ -2,6 +2,8 @@
 
 [https://github.com/python-poetry/poetry](https://github.com/python-poetry/poetry)
 
+[https://python-poetry.org/docs/#installing-with-the-official-installer](https://python-poetry.org/docs/#installing-with-the-official-installer)
+
 ```
 curl -sSL https://install.python-poetry.org | python3 -
 echo 'export PATH="/Users/zhanghe/.local/bin:$PATH"' >> ~/.zshrc
@@ -31,4 +33,35 @@ poetry install --no-root                    # 安装全部模块，同步到虚�
 poetry update                               # 更新全部模块
 
 poetry export --with=dev --without-hashes -o requirements.txt
+```
+
+## MacOS环境 安装poetry过程中报错 `SSL: CERTIFICATE_VERIFY_FAILED`
+
+```
+urllib.error.URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)>
+```
+
+查看默认证书位置
+```
+➜  ~ python3
+Python 3.10.11 (v3.10.11:7d4cc5aa85, Apr  4 2023, 19:05:19) [Clang 13.0.0 (clang-1300.0.29.30)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import ssl
+>>> print(ssl.get_default_verify_paths())
+DefaultVerifyPaths(cafile=None, capath=None, openssl_cafile_env='SSL_CERT_FILE', openssl_cafile='/Library/Frameworks/Python.framework/Versions/3.10/etc/openssl/cert.pem', openssl_capath_env='SSL_CERT_DIR', openssl_capath='/Library/Frameworks/Python.framework/Versions/3.10/etc/openssl/certs')
+>>>
+```
+
+发现文件不存在
+
+下载CA
+```
+➜  ~ ls /Library/Frameworks/Python.framework/Versions/3.10/etc/openssl
+➜  ~ 
+➜  ~ cd /Library/Frameworks/Python.framework/Versions/3.10/etc/openssl
+➜  openssl ls
+➜  openssl mkdir -p certs
+➜  openssl wget http://curl.haxx.se/ca/cacert.pem -O cert.pem
+➜  openssl ls
+cert.pem certs
 ```

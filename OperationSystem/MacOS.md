@@ -208,6 +208,15 @@ Microsoft Remote Desktop Beta
 
 AppStore 不支持中国区，需要找其他下载资源
 
+Mac系统远程连接Windows系统如何拷贝文件：
+```
+1.打开Microsoft Remote Desktop软件，右键点击对应连接，选择“Edit”
+2.点选“Local Resources”，勾选下方的“Folders”,点击“+”符号
+3.选择好需要挂载的文件目录(可以选择/Users/Shared)，然后点击“Open”
+4.点击“Save”
+5.此时连接远程桌面后可以查看到挂载的文件目录,进入对应目录下可以操作拷贝文件
+```
+
 ## 网线直连（支持共享网络，通过Mac的Wi-Fi上外网）
 
 雷雳接口通过网口转换器插入网线连接另一台设备（电脑）

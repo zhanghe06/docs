@@ -36,6 +36,11 @@ Get Docker CE for Ubuntu
 
 Docker 中国官方镜像加速 registry mirror [https://registry.docker-cn.com](https://registry.docker-cn.com)
 
+```
+{
+    "registry-mirrors": ["https://registry.docker-cn.com"]
+}
+```
 
 ## 错误调试
 
