@@ -660,6 +660,12 @@ $ git config --global core.autocrlf false
 git config --global core.quotepath false
 ```
 
+## git log 中文乱码
+
+```
+export LESSCHARSET=utf-8
+```
+
 ## tag
 
 - tag 是一个点，静态的

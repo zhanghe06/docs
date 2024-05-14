@@ -73,3 +73,18 @@ success	| 消息获取成功	| 不重试
 
 三步实现支付宝支付【go语言 支付宝沙箱】
 https://blog.csdn.net/xiao_xiao_w/article/details/136586052
+
+合并支付
+https://opendocs.alipay.com/open/direct-payment/qadp9d?pathHash=854361c6
+
+
+## 注册
+
+- [常见问题](https://opendocs.alipay.com/open/204/105849/)
+- [开放平台](https://open.alipay.com/develop/manage)
+- [商家平台](https://b.alipay.com/page/store-management/infomanage)
+
+确认主体信息
+```
+账号中心 -> 绑定 -> APPID绑定 -> 绑定详情 -> APPID信息
+```

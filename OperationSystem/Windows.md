@@ -28,3 +28,11 @@ J8WVF-9X3GM-4WVYC-VDHQG-42CXT
 ## WinRAR
 
 [https://www.win-rar.com/postdownload.html?&L=7](https://www.win-rar.com/postdownload.html?&L=7)
+
+## C盘`Pagefile.sys`迁移
+
+计算机 -> 右键属性
+```
+1、将C盘设置为【无分页文件】
+2、将目标盘设置为【系统管理的大小】，或者【自定义大小】
+```

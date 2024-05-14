@@ -37,6 +37,9 @@ cd ~/my_env_pkgs/simple/
 python -m http.server
 # 开启HTTP Server - Python2
 python -m SimpleHTTPServer
+# 后台开启HTTP服务
+nohup python -m http.server 8000 2>&1 &
+nohup python -m SimpleHTTPServer 8000 2>&1 &
 ```
 
 [http://127.0.0.1:8000](http://127.0.0.1:8000)

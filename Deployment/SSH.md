@@ -70,3 +70,20 @@ cat ~/.ssh/config
 Host *
   HostKeyAlgorithms ssh-rsa
 ```
+
+## ubuntu ssh 同时支持公钥和密码登录
+
+22.04.4 安装完成之后默认都支持（默认yes并注释）
+
+/etc/ssh/sshd_config
+
+确保下面两行没有被注释掉（前面不包含#符号）
+```
+PubkeyAuthentication yes
+PasswordAuthentication yes
+```
+
+重新加载SSH服务器配置
+```
+sudo service ssh reload
+```

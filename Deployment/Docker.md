@@ -27,7 +27,7 @@ Get Docker CE for Ubuntu
    $(lsb_release -cs) \
    stable"
 # apt-get update
-# apt-get install docker-ce docker-ce-cli containerd.io
+# apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 # docker -v
 # docker ps
 ```
@@ -40,6 +40,11 @@ Docker 中国官方镜像加速 registry mirror [https://registry.docker-cn.com]
 {
     "registry-mirrors": ["https://registry.docker-cn.com"]
 }
+```
+
+```
+docker version
+docker compose version
 ```
 
 ## 错误调试
@@ -253,4 +258,10 @@ docker container update <container_name> --memory="512m" --memory-swap="512m"
 
 # 更新容器核数限制
 docker container update <container_name> --cpus="0.5"
+```
+
+另外，也可以更新启动状态下容器的其它配置
+```
+docker container update --privileged=true <container_name>
+docker container update --restart=always <container_name>
 ```

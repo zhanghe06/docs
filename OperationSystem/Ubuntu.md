@@ -122,6 +122,16 @@ desktop-file-validate firefox.desktop
 在结果栏中，双击 browser.sessionstore.resume_from_crash 旁边的 交替按钮并设置其值为 false。
 ```
 
+8、取消浏览器弹窗
+
+```
+设置 -> 常规 -> 浏览 -> 取消在您浏览时推荐扩展
+设置 -> 常规 -> 浏览 -> 取消在您浏览时推荐新功能
+```
+
+9、取消软件更新弹窗
+
+软件和更新 -> 更新 -> 自动检查更新 -> 从不
 
 ## 镜像下载
 
@@ -183,4 +193,21 @@ Confirm your password: xxxxxx
 ssh-copy-id mixi@192.168.2.2
 # 指定公钥文件
 ssh-copy-id -i ~/.ssh/id_rsa.pub mixi@192.168.2.2
+```
+
+## ubuntu ssh 同时支持公钥和密码登录
+
+22.04.4 安装完成之后默认都支持（默认yes并注释）
+
+/etc/ssh/sshd_config
+
+确保下面两行没有被注释掉（前面不包含#符号）
+```
+PubkeyAuthentication yes
+PasswordAuthentication yes
+```
+
+重新加载SSH服务器配置
+```
+sudo service ssh reload
 ```

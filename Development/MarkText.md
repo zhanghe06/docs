@@ -1,5 +1,7 @@
 # MarkText
 
+[https://www.marktext.cc/](https://www.marktext.cc/)
+
 [https://github.com/marktext/marktext](https://github.com/marktext/marktext)
 
 ```

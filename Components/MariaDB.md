@@ -917,3 +917,8 @@ docker cp mariadb-node02:/etc/mysql /opt/mariadb/conf
 
 MySQL 自4.1版以后开始支持INSERT … ON DUPLICATE KEY UPDATE
 
+## 信创
+
+信创不准使用MySQL，但是可以使用`MariaDB`、`PostgreSQL`
+
+如果客户没有指定数据库，是可以用`MariaDB`替代的
